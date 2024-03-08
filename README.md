@@ -8,53 +8,46 @@ As you can see, there is barely any information about the city in English. As I 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Instructions for spinning up codebase locally.
 
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
 ```
-Give examples
+Node.js
+PostgreSQL
+Postico
+Git
+Nodemon
+
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+Install project dependencies.
 
 ```
-Give the example
+npm install
 ```
 
-And repeat
+## Running application
+
+Run database from postgreSQL. Use the `database.sql` to initialize the database.
+
+Make sure to name the database `hwaseong_app`.
 
 ```
-until finished
+npm run server
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+In a separate terminal, run...
 
 ```
-Give an example
+npm run client
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+Start working.
 
 ## Deployment
 
@@ -76,7 +69,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
+- **Jessica Yang** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
