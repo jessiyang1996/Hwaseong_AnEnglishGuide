@@ -4,4 +4,19 @@
   object-fit: cover;
   /* object-position: 0 70%; */
   object-position: 0 65%;
+  margin-top: 5em;
+}
+
+.descriptionDetailDiv {
+  height: 400px;
+  background-color: rgb(253, 249, 240);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.descriptionDetail {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 36px;
+  width: 75%;
 }
