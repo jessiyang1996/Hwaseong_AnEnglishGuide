@@ -13,11 +13,10 @@ function LandingPage() {
       </div>
       <div className="descriptionDetailDiv">
         <p className="descriptionDetail">
-          Explore Hwaseong City. Experience life on the western port of South
-          Korea. Enjoy the flavors of the sea. Learn about the history of
-          Hwaseong. Watch the sunset. Explore a new town. Catch crabs on the
-          mudflats. Ride a cable car over the sea. There's many things to see
-          and do in Hwaseong.
+          Explore Hwaseong City. Experience life on the ports of Korea. Enjoy
+          the flavors of the sea. Learn about the history of Hwaseong. Watch the
+          sunset. Explore a new town. Catch crabs on the mudflats. Ride a cable
+          car over the sea. There's many things to see and do in Hwaseong.
         </p>
       </div>
     </div>
