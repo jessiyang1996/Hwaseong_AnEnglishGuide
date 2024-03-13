@@ -3,7 +3,7 @@
   height: 600px;
   object-fit: cover;
   /* object-position: 0 70%; */
-  object-position: 0 62%;
+  object-position: 0 92%;
   margin-top: 5px;
 }
 
@@ -18,5 +18,24 @@
 .descriptionDetail {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 36px;
-  width: 75%;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  width: 65%;
+}
+
+.snapshotContainer {
+  text-align: center;
+}
+
+.imagesGalleryDiv {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgItem {
+  width: 400px;
+  height: 270px;
+  object-fit: cover;
 }
