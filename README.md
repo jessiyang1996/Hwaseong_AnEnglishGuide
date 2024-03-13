@@ -12,8 +12,6 @@ Instructions for spinning up codebase locally.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
 ```
 Node.js
 PostgreSQL

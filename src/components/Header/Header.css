@@ -1,0 +1,15 @@
+.headerDiv {
+  background-color: rgb(255, 125, 3);
+  height: 80px;
+  color: white;
+  display: flex;
+}
+
+.headerTitleLink {
+  text-decoration: none;
+  color: white;
+}
+
+.headerTitle {
+  margin-left: 45px;
+}
