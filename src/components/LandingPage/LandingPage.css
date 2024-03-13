@@ -1,6 +1,12 @@
+.headerImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .headerImage {
   width: 100%;
-  height: 600px;
+  height: 500px;
   object-fit: cover;
   /* object-position: 0 70%; */
   object-position: 0 92%;

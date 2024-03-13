@@ -7,7 +7,7 @@ import RegisterForm from '../RegisterForm/RegisterForm';
 function LandingPage() {
   return (
     <div className="landingPageContainer">
-      <div className="container">
+      <div className="headerImageContainer">
         {/* <img className="headerImage" src="/images/IMG_0055.jpg"></img> */}
         {/* <img className="headerImage" src="/images/tando-jeongok.jpeg"></img> */}
         <img className="headerImage" src="/images/IMG_9443.jpg"></img>
