@@ -1,15 +1,32 @@
 .headerDiv {
-  background-color: rgb(255, 125, 3);
   height: 80px;
-  color: white;
   display: flex;
+  background-color: rgb(253, 234, 199);
 }
 
 .headerTitleLink {
   text-decoration: none;
-  color: white;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .headerTitle {
-  margin-left: 45px;
+  margin-left: 175px;
+  background-color: orange;
+}
+
+.navDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLink {
+  display: inline-block;
+  color: #1a1a1a;
+  /* background-color: rgb(254, 219, 154); */
+  text-align: center;
+  padding: 24px 15px;
+  text-decoration: none;
+  font-size: 20px;
 }
