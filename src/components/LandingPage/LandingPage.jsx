@@ -10,7 +10,7 @@ function LandingPage() {
       <div className="headerImageContainer">
         {/* <img className="headerImage" src="/images/IMG_0055.jpg"></img> */}
         {/* <img className="headerImage" src="/images/tando-jeongok.jpeg"></img> */}
-        <img className="headerImage" src="/images/IMG_9443.jpg"></img>
+        <img className="headerImage" src="/images/IMG_9440.jpg"></img>
       </div>
       <div className="descriptionDetailDiv">
         <p className="descriptionDetail">
