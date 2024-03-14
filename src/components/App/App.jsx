@@ -35,7 +35,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Route to="/" exact>
+        <Route path="/home" exact>
           <LandingPageOfficial />
         </Route>
         <Footer />
