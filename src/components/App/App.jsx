@@ -38,6 +38,9 @@ function App() {
         <Route path="/home" exact>
           <LandingPageOfficial />
         </Route>
+        <Route path="/about" exact>
+          <AboutPage />
+        </Route>
         <Footer />
       </div>
       <div>{/* <Header /> */}</div>
