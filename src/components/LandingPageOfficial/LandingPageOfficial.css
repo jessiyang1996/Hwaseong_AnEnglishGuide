@@ -1,9 +1,10 @@
-body {
+.mainImage {
   min-width: 100vw;
   max-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  margin: 0;
+  object-fit: cover;
+  object-position: 0 78%;
 }
