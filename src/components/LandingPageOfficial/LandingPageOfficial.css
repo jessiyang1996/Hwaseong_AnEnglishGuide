@@ -23,15 +23,15 @@ body {
   /* background-color: red; */
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .navigationLogo {
   height: 40px;
-  margin-left: 30px;
+  margin-left: 50px;
 }
 
 .navLinkContainer {
-  display: flex;
   text-align: left;
   /* background-color: red; */
 }
