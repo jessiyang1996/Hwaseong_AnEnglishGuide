@@ -13,6 +13,7 @@ import Footer from '../Footer/Footer';
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
+import Nav from '../Nav/Nav';
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';
@@ -35,15 +36,15 @@ function App() {
   return (
     <Router>
       <div>
-        <Route path="/home" exact>
+        <Route path="/" exact>
           <LandingPageOfficial />
+          {/* <LandingPage /> */}
         </Route>
         <Route path="/about" exact>
           <AboutPage />
         </Route>
         <Footer />
       </div>
-      <div>{/* <Header /> */}</div>
     </Router>
   );
 }

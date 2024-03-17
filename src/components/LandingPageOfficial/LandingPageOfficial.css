@@ -1,27 +1,77 @@
-.mainImage {
-  min-width: 100vw;
-  max-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  object-fit: cover;
-  object-position: 0 78%;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-
-.descriptionDiv {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  bottom: 10%;
+.mainHeaderImage {
+  position: relative;
+  background: url(/images/LandingPageHeaderImage.svg) no-repeat center;
+  background-size: cover;
   width: 100%;
-  margin-top: 9px;
+  height: 900px;
+  margin: 0px;
+  overflow: hidden;
 }
 
-.descriptionParagraph {
-  width: 75%;
+/* Navigation */
+.navigationBarContainer {
+  position: absolute;
+  margin-top: 30px;
+  top: 0%;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+}
+
+.navigationLogo {
+  height: 40px;
+  margin-left: 30px;
+}
+
+.navLinkContainer {
+  display: flex;
+  text-align: left;
+  /* background-color: red; */
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navLink {
+  text-decoration: none;
   color: white;
-  font-size: 20px;
+}
+
+.navLink :hover {
+  background-color: white;
+  color: black;
+}
+
+/* Description */
+.hwaseongText {
+  position: absolute;
+  font-size: 90px;
+  color: white;
+  top: 40%;
+  left: 38%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.titleSubtitle {
+  position: absolute;
+  font-size: 30px;
+  top: 42%;
+  left: 48%;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
