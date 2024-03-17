@@ -1,6 +1,5 @@
 .aboutHeader {
   width: 100%;
-  text-align: center;
 }
 
 .contentContainer {
@@ -14,4 +13,18 @@
 
 .smallerContainer {
   width: 65%;
+}
+
+/* resources: */
+.resourcesDiv {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.blue {
+  color: blue;
 }
