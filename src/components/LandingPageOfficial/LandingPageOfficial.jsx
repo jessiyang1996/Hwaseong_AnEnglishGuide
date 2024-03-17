@@ -45,13 +45,25 @@ function LandingPageOfficial() {
         </div>
         {/* end of navigation bar */}
         <div className="descriptionDiv">
-          <h3 className="sectionTitle">Explore Hwaseong City. </h3>
-          <p className="descriptionDivDescription">
-            Experience life on the ports of Korea. Enjoy the flavors of the sea.
-            Learn about the history of Hwaseong. Watch the sunset. Explore a new
-            town. Catch crabs on the mudflats. Ride a cable car over the sea.
-            There's many things to see and do in Hwaseong.
-          </p>
+          <div className="sectionHeaderDiv">
+            <h3>Explore Hwaseong City. </h3>
+          </div>
+
+          <div className="sloganContainer">
+            <div className="sloganItemDiv">
+              <p>Experience life on the ports of Korea.</p>
+              <img src=""></img>
+            </div>
+            <div className="sloganItemDiv">
+              <img></img>
+              <p>Enjoy the flavors of the sea..</p>
+            </div>
+            <p className="descriptionDivDescription">
+              Learn about the history of Hwaseong. Watch the sunset. Explore a
+              new town. Catch crabs on the mudflats. Ride a cable car over the
+              sea. There's many things to see and do in Hwaseong.
+            </p>
+          </div>
         </div>
       </div>
 

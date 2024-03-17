@@ -8,7 +8,7 @@
   width: 100%;
   height: 500px;
   object-fit: cover;
-  object-position: 0 88%;
+  /* object-position: 0 88%; */
   margin-top: 5px;
 }
 

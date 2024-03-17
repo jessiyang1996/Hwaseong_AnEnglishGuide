@@ -6,12 +6,14 @@ body {
 }
 .mainHeaderImage {
   position: relative;
-  background: url(/images/LandingPageHeaderImage.svg) no-repeat center;
+  background: url(/images/IMG_9440.jpg) no-repeat center;
   background-size: cover;
   width: 100%;
   height: 900px;
   margin: 0px;
   overflow: hidden;
+  object-fit: cover;
+  background-position: 0 99%;
 }
 
 /* Navigation */
@@ -27,8 +29,8 @@ body {
 }
 
 .navigationLogo {
-  height: 40px;
-  margin-left: 50px;
+  height: 50px;
+  margin-left: 40px;
 }
 
 .navLinkContainer {
@@ -58,13 +60,26 @@ li {
 }
 
 /* Description */
-.hwaseongText {
-  position: absolute;
-  font-size: 90px;
-  color: white;
-  top: 40%;
-  left: 38%;
+.sectionHeaderDiv {
+  color: black;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 100%;
+  margin-top: 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.shorterBodyDiv {
+  width: 89%;
+  background-color: rgba(128, 128, 0, 0.253);
+  height: 200px;
+  margin-top: 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .titleSubtitle {
