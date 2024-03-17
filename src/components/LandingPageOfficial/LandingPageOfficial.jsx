@@ -56,7 +56,7 @@ function LandingPageOfficial() {
             </div>
             <div className="sloganItemDiv">
               <img></img>
-              <p>Enjoy the flavors of the sea..</p>
+              <p>Enjoy the flavors of the sea.</p>
             </div>
             <p className="descriptionDivDescription">
               Learn about the history of Hwaseong. Watch the sunset. Explore a

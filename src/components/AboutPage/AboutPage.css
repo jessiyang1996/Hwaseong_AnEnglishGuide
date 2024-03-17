@@ -1,0 +1,17 @@
+.aboutHeader {
+  width: 100%;
+  text-align: center;
+}
+
+.contentContainer {
+  /* background-color: red; */
+  display: flex;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.smallerContainer {
+  width: 65%;
+}
