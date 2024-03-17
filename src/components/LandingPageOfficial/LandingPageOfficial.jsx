@@ -15,12 +15,12 @@ function LandingPageOfficial() {
               <ul>
                 <li>
                   <a href="http://localhost:5173/#/" className="navLink">
-                    Home
+                    HOME
                   </a>
                 </li>
                 <li>
                   <a href="http://localhost:5173/#/about" className="navLink">
-                    About
+                    ABOUT
                   </a>
                 </li>
                 <li>
@@ -28,7 +28,7 @@ function LandingPageOfficial() {
                     href="http://localhost:5173/#/explore-hwaseong"
                     className="navLink"
                   >
-                    Explore Hwaseong
+                    EXPLORE HWASEONG
                   </a>
                 </li>
                 <li>
@@ -36,7 +36,7 @@ function LandingPageOfficial() {
                     href="http://localhost:5173/#/nearby-recommendations"
                     className="navLink"
                   >
-                    Nearby Recommendations
+                    NEARBY RECOMMENDATIONS
                   </a>
                 </li>
               </ul>

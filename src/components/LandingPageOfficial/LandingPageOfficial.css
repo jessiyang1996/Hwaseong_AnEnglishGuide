@@ -32,7 +32,8 @@ body {
 }
 
 .navLinkContainer {
-  text-align: left;
+  margin-right: 25px;
+
   /* background-color: red; */
 }
 
