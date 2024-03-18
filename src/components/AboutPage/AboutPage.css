@@ -1,5 +1,12 @@
-.aboutHeader {
+.container {
+  /* margin-top: 100px; */
+}
+
+.AboutHeaderImage {
   width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: 0 65%;
 }
 
 .contentContainer {
@@ -15,12 +22,38 @@
   width: 65%;
 }
 
-/* resources: */
-.resourcesDiv {
+.hwaseongGyeonggiMap {
+  max-width: 200px;
+  margin-right: 20px;
+}
+
+.contentSideBySide {
   display: flex;
   text-align: left;
   align-items: center;
   justify-content: center;
+}
+
+/* image styling */
+.imgContent {
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.figcaption {
+  margin-right: 20px;
+}
+
+/* resources: */
+.resourcesDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
   width: 100%;
   /* background-color: red; */
 }

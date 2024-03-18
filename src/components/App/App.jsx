@@ -16,7 +16,6 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import Nav from '../Nav/Nav';
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
-import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
@@ -34,18 +33,21 @@ function App() {
   }, [dispatch]);
 
   return (
-    <Router>
-      <div>
-        <Route path="/" exact>
-          <LandingPageOfficial />
-          {/* <LandingPage /> */}
-        </Route>
-        <Route path="/about" exact>
-          <AboutPage />
-        </Route>
-        <Footer />
-      </div>
-    </Router>
+    <div>
+      <Router>
+        <Nav />
+        <div>
+          <Route path="/" exact>
+            <LandingPageOfficial />
+            {/* <LandingPage /> */}
+          </Route>
+          <Route path="/about" exact>
+            <AboutPage />
+          </Route>
+          <Footer />
+        </div>
+      </Router>
+    </div>
   );
 }
 
