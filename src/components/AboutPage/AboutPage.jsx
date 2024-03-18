@@ -12,6 +12,7 @@ function AboutPage() {
             src="/images/cafeInSeoshin.jpg"
             className="AboutHeaderImage"
           ></img>
+          <h1 className="aboutTitleStyling"> About</h1>
         </div>
         {/* End of about header image */}
         <div className="contentContainer">
@@ -24,63 +25,69 @@ function AboutPage() {
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gyeonggi-Hwaseong.svg/800px-Gyeonggi-Hwaseong.svg.png"
                 ></img>
                 <figcaption className="figcaption">
-                  Hwaseong is highlighted in red on the map of South Korea.
-                  <span className="blue">[2]</span>
+                  Hwaseong is highlighted in red on the map of South Korea
+                  <span className="blue">[2]</span>.
                 </figcaption>
               </div>
               <div>
-                <h3 className="aboutHeader">Location</h3>
+                <h3 className="aboutHeader">Introduction</h3>
                 <p>
                   <b>Hwaseong</b> is a city located on the west coast of
-                  <b> Gyeonggi-do</b>, South Korea. It has one of the largest
-                  land area in the Gyeonggi-do province (the land surrounding
-                  Seoul) and most of the land is used for farming. Some major
-                  crops in this area include rice and Songsan Grapes. Due to
-                  it's close proximity to Seoul and the more affordable land
-                  prices, many factories and large manufacturing companies are
-                  located here. Some notable companies located in Hwaseong
-                  include <b>Samsung, Hyundai, Kia Motors, and 3M</b>. Samsung
-                  plays a large role in the Hwaseong economy as many people are
-                  employed by Samsung. The new town, <b>Dongtan</b>, was built
-                  for the families who moved to Hwaseong to work in the new
-                  Samsung Nano City.
-                  <p>
-                    As Hwaseong is next to the Yellow Sea, seafood also plays a
-                    big part of Hwaseong's economy. There are many seafood
-                    markets located here and many people come to Hwaseong to
-                    visit the beaches, go fishing, eat fresh seafood, or play in
-                    the mudflats. Unlike the east coast, the west coast of Korea
-                    does not have sandy beaches. Usually, the waves pull back
-                    and leave mineral-rich mudflats where families like to dig
-                    and play in.
-                  </p>
+                  <b> Gyeonggi-do</b>, South Korea. The name "Hwaseong" roughly
+                  translates to "Mars" or "Brilliant Castle"
+                  <span className="blue">[1]</span>. Most of the land is used
+                  for farming. Some major crops in this area include rice and
+                  Songsan Grapes. Due to it's close proximity to Seoul and the
+                  more affordable land prices, many factories and large
+                  manufacturing companies are located here. Some notable
+                  companies include <b> Samsung, Hyundai, Kia Motors, and 3M</b>
+                  . Samsung plays a large role in Hwaseong's economy as many
+                  people are employed by Samsung. The new town, <b>Dongtan</b>,
+                  was built for the families who moved to Hwaseong to work in
+                  the new Samsung Nano City - Hwaseong campus. Another important
+                  industry in Hwaseong is the fishing industry. As it is next to
+                  the Yellow Sea, seafood plays a big part in Hwaseong's
+                  identity and economy.
+                  <p></p>
                 </p>
                 <h3>History and the Creation of Hwaseong City</h3>
                 <p>
-                  The South Korea that we know today is relatively new. It was
-                  one of the poorest nations in the world after the Korean War
-                  ended in 1953. In less than 100 years, South Korea was able to
-                  build itself into a major economical powerhouse. After the
-                  war, the Korean people worked extremely hard to pull their
-                  nation out of poverty. As such, there were many changes
-                  happening in Korea. Cities, for example, were constantly being
-                  renamed and city borders were constantly changed. Because of
-                  this, not many people know about Hwaseong City. In 2001,
-                  Hwaseong was officially turned into a city. Before it was a
-                  city, it was part of Suwon County
-                  <span className="blue">[1]</span>. That is why many Korean
-                  people are confused today when Hwaseong is mentioned. For
-                  older people, they may still consider Hwaseong as part of
-                  Suwon. For younger people, they may only know of the famous
-                  UNESCO site called Hwaseong Fortress in Suwon.
+                  South Korea was one of the poorest nations in the world after
+                  the Korean War ended in 1953. In less than 100 years, South
+                  Korea was able to rebuild itself into a major economic
+                  powerhouse. Due to the extremely fast modernization and
+                  industrialization of South Korea, there were many changes
+                  happening. Cities, for example, were constantly being renamed
+                  and city borders redrawn. Because of this, many people are
+                  confused about Hwaseong. Hwaseong was originally part of Suwon
+                  County. Then, in 2001, Hwaseong was turned into a city
+                  <span className="blue">[3]</span>. That is why many Korean
+                  people are confused when Hwaseong is mentioned.
                 </p>
               </div>
             </div>
             <p>
-              Either ways, Suwon and Hwaseong City has a complex, intertwined,
-              and long relationship.
+              For older people, they may still consider Hwaseong as part of
+              Suwon. For younger people, they may only know of the famous UNESCO
+              site called Hwaseong Fortress in Suwon. Either ways, Suwon and
+              Hwaseong City has a complex, intertwined, and long relationship.
             </p>
-
+            <div>
+              <p>
+                Hwaseong is a quickly growing city. Many people end up moving to
+                Hwaseong due to all the companies, factories, etc that are
+                located here. In 2021, The Korea Herald reported that Hwaseong's
+                population grew by 69.3%<span className="blue">[4]</span>! And
+                at the end of 2023, Hwaseong mayor, Jong Myeong-geum, declared
+                in an interview with Korea Post that that Hwaseong is on it's
+                way to become a 1-million man city
+                <span className="blue">[3]</span>! As Hwaseong is quickly
+                growing and developing, many more people will be interested in
+                or moving to Hwaseong. This guide was created to help those who
+                moved to Hwaseong or is interested in Hwaseong as there isn't
+                much information about the city in English.
+              </p>
+            </div>
             {/* Photo gallery */}
             <div className="aboutPhotoGallery">
               <img src="" className="aboutPhotoGalleryItem"></img>
@@ -97,14 +104,24 @@ function AboutPage() {
         <div className="smallerContainer">
           <h3 className="divTitle">Resources:</h3>
           <div>
-            <a href="https://encykorea.aks.ac.kr/Article/E0064683">
-              [1] https://encykorea.aks.ac.kr/Article/E0064683
+            <a href="https://www.koreapost.com/news/articleView.html?idxno=40765">
+              [1] https://www.koreapost.com/news/articleView.html?idxno=40765
             </a>
           </div>
           <div>
             <a href="https://koreaonthego.wordpress.com/2014/04/04/suwon-city-%EC%88%98%EC%9B%90%EC%8B%9C/">
               [2]
               https://koreaonthego.wordpress.com/2014/04/04/suwon-city-%EC%88%98%EC%9B%90%EC%8B%9C/
+            </a>
+          </div>
+          <div>
+            <a href="https://encykorea.aks.ac.kr/Article/E0064683">
+              [3] https://encykorea.aks.ac.kr/Article/E0064683
+            </a>
+          </div>
+          <div>
+            <a href="https://www.koreaherald.com/view.php?ud=20210810000363">
+              [4] https://www.koreaherald.com/view.php?ud=20210810000363
             </a>
           </div>
         </div>
