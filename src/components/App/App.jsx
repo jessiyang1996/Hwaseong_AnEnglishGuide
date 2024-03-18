@@ -44,6 +44,9 @@ function App() {
           <Route path="/about" exact>
             <AboutPage />
           </Route>
+          <Route path="/admin" exact>
+            <LoginPage />
+          </Route>
           <Footer />
         </div>
       </Router>

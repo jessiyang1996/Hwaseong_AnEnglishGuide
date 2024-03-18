@@ -90,11 +90,11 @@ function AboutPage() {
                 <span className="blue">[3]</span>. As Hwaseong is quickly
                 growing and developing, many more people will be interested in
                 or moving to Hwaseong. When I moved to Hwaseong in 2020, there
-                was barely any information about Hwaseong City. This guide was
-                created to help those who moved to Hwaseong or is interested in
-                exploring or getting to know the city more. It was created from
-                the perspective of someone who lived and worked in Hwaseong for
-                3 years.
+                was barely any English information about Hwaseong City. This
+                guide was created to help those who are interested in exploring
+                or getting to know the city more. It was created from the
+                perspective of someone who lived and worked in Hwaseong for 3
+                years.
               </p>
             </div>
             {/* Photo gallery */}
