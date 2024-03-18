@@ -64,33 +64,37 @@ function AboutPage() {
                   was renamed to Hwaseong County. And in 2001, Hwaseong was
                   turned into a city
                   <span className="blue">[3]</span>. That is why many Korean
-                  people are confused when Hwaseong is mentioned. It also
-                  doesn't help that Hwaseong City was named
+                  people are confused about Hwaseong. It also doesn't help that
+                  Hwaseong City was named after the
                 </p>
               </div>
             </div>
             <p>
-              after the UNESCO site, Hwaseong Fortress, which is located in
-              Suwon City. For older people, they may still consider Hwaseong as
-              part of Suwon. For younger people, they may only know of the
-              famous UNESCO site. Either ways, Hwaseong and Suwon has a complex,
-              intertwined, and long relationship.
+              UNESCO site, Hwaseong Fortress, which is located in Suwon City.
+              For older people, they may still consider Hwaseong as part of
+              Suwon. For younger people, they may only know of the famous UNESCO
+              site. Either ways, Hwaseong and Suwon has a complex, intertwined,
+              and long relationship.
             </p>
             <h3>Hwaseong Today</h3>
             <div>
               <p>
-                Hwaseong is a quickly growing city. Many people end up moving to
-                Hwaseong due to all the companies, factories, etc that are
-                located here. In 2021, The Korea Herald reported that Hwaseong's
-                population grew by 69.3%<span className="blue">[4]</span>! And
-                at the end of 2023, Hwaseong mayor, Jong Myeong-geum, declared
-                in an interview with Korea Post that that Hwaseong is on it's
-                way to become a 1-million man city
-                <span className="blue">[3]</span>! As Hwaseong is quickly
+                Hwaseong is a quickly growing city. Many people move to Hwaseong
+                due to the opportunities from the companies and factories that
+                are located here. In 2021, The Korea Herald reported that
+                Hwaseong's population grew by 69.3%
+                <span className="blue">[4]</span>. And at the end of 2023,
+                Hwaseong mayor Jong Myeong-geum, declared in an interview with
+                Korea Post that that Hwaseong is on it's way to become a
+                1-million man city
+                <span className="blue">[3]</span>. As Hwaseong is quickly
                 growing and developing, many more people will be interested in
-                or moving to Hwaseong. This guide was created to help those who
-                moved to Hwaseong or is interested in Hwaseong as there isn't
-                much information about the city in English.
+                or moving to Hwaseong. When I moved to Hwaseong in 2020, there
+                was barely any information about Hwaseong City. This guide was
+                created to help those who moved to Hwaseong or is interested in
+                exploring or getting to know the city more. It was created from
+                the perspective of someone who lived and worked in Hwaseong for
+                3 years.
               </p>
             </div>
             {/* Photo gallery */}
