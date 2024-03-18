@@ -60,18 +60,23 @@ function AboutPage() {
                   happening. Cities, for example, were constantly being renamed
                   and city borders redrawn. Because of this, many people are
                   confused about Hwaseong. Hwaseong was originally part of Suwon
-                  County. Then, in 2001, Hwaseong was turned into a city
+                  County. Then, when Suwon broke off to become a city, Hwaseong
+                  was renamed to Hwaseong County. And in 2001, Hwaseong was
+                  turned into a city
                   <span className="blue">[3]</span>. That is why many Korean
-                  people are confused when Hwaseong is mentioned.
+                  people are confused when Hwaseong is mentioned. It also
+                  doesn't help that Hwaseong City was named
                 </p>
               </div>
             </div>
             <p>
-              For older people, they may still consider Hwaseong as part of
-              Suwon. For younger people, they may only know of the famous UNESCO
-              site called Hwaseong Fortress in Suwon. Either ways, Suwon and
-              Hwaseong City has a complex, intertwined, and long relationship.
+              after the UNESCO site, Hwaseong Fortress, which is located in
+              Suwon City. For older people, they may still consider Hwaseong as
+              part of Suwon. For younger people, they may only know of the
+              famous UNESCO site. Either ways, Hwaseong and Suwon has a complex,
+              intertwined, and long relationship.
             </p>
+            <h3>Hwaseong Today</h3>
             <div>
               <p>
                 Hwaseong is a quickly growing city. Many people end up moving to
