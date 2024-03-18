@@ -54,6 +54,30 @@
   margin-right: 20px;
   background-color: rgb(56, 55, 55, 0.1);
 }
+
+/* About Page - Photo Gallery */
+.aboutPhotoGalleryTitle {
+  text-align: center;
+}
+
+.aboutPhotoGallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutPhotoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutPhotoGalleryItem {
+  width: 200px;
+  background-color: black;
+  height: 200px;
+  margin: 10px;
+}
 /* Text styling */
 
 /* resources: */

@@ -25,8 +25,8 @@ function AboutPage() {
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gyeonggi-Hwaseong.svg/800px-Gyeonggi-Hwaseong.svg.png"
                 ></img>
                 <figcaption className="figcaption">
-                  Hwaseong is highlighted in red on the map of South Korea
-                  <span className="blue">[2]</span>.
+                  Hwaseong is highlighted in red on the map of South Korea.
+                  <span className="blue">[2]</span>
                 </figcaption>
               </div>
               <div>
@@ -34,9 +34,9 @@ function AboutPage() {
                 <p>
                   <b>Hwaseong</b> is a city located on the west coast of
                   <b> Gyeonggi-do</b>, South Korea. The name "Hwaseong" roughly
-                  translates to "Mars" or "Brilliant Castle"
-                  <span className="blue">[1]</span>. Most of the land is used
-                  for farming. Some major crops in this area include rice and
+                  translates to "Mars" or "Brilliant Castle."
+                  <span className="blue">[1]</span> Most of the land is used for
+                  farming. Some major crops in this area include rice and
                   Songsan Grapes. Due to it's close proximity to Seoul and the
                   more affordable land prices, many factories and large
                   manufacturing companies are located here. Some notable
@@ -56,55 +56,55 @@ function AboutPage() {
                   the Korean War ended in 1953. In less than 100 years, South
                   Korea was able to rebuild itself into a major economic
                   powerhouse. Due to the extremely fast modernization and
-                  industrialization of South Korea, there were many changes
-                  happening. Cities, for example, were constantly being renamed
-                  and city borders redrawn. Because of this, many people are
+                  industrialization of South Korea, numerous changes were taking
+                  place. Cities, for example, were constantly being renamed and
+                  city borders redrawn. Because of this, many people are
                   confused about Hwaseong. Hwaseong was originally part of Suwon
                   County. Then, when Suwon broke off to become a city, Hwaseong
                   was renamed to Hwaseong County. And in 2001, Hwaseong was
-                  turned into a city
-                  <span className="blue">[3]</span>. That is why many Korean
+                  turned into a city.
+                  <span className="blue">[3]</span> That is why many Korean
                   people are confused about Hwaseong. It also doesn't help that
-                  Hwaseong City was named after the
+                  Hwaseong City was named after the UNESCO site, Hwaseong
+                  Fortress, which is
                 </p>
               </div>
             </div>
             <p>
-              UNESCO site, Hwaseong Fortress, which is located in Suwon City.
-              For older people, they may still consider Hwaseong as part of
-              Suwon. For younger people, they may only know of the famous UNESCO
-              site. Either ways, Hwaseong and Suwon has a complex, intertwined,
-              and long relationship.
+              located in Suwon City. For older people, they may still consider
+              Hwaseong as part of Suwon. For younger people, they may only know
+              of the famous UNESCO site. Either ways, Hwaseong and Suwon has a
+              complex, intertwined, and long relationship.
             </p>
             <h3>Hwaseong Today</h3>
             <div>
               <p>
-                Hwaseong is a quickly growing city. Many people move to Hwaseong
-                due to the opportunities from the companies and factories that
-                are located here. In 2021, The Korea Herald reported that
-                Hwaseong's population grew by 69.3%
-                <span className="blue">[4]</span>. And at the end of 2023,
+                Hwaseong is quickly growing. Many people move to Hwaseong due to
+                the more affordable housing options and opportunities from the
+                companies and factories that are located here. In 2021, The
+                Korea Herald reported that Hwaseong's population grew by 69.3%.
+                <span className="blue">[4]</span> And at the end of 2023,
                 Hwaseong mayor Jong Myeong-geum, declared in an interview with
                 Korea Post that that Hwaseong is on it's way to become a
-                1-million man city
-                <span className="blue">[3]</span>. As Hwaseong is quickly
-                growing and developing, many more people will be interested in
-                or moving to Hwaseong. When I moved to Hwaseong in 2020, there
-                was barely any English information about Hwaseong City. This
-                guide was created to help those who are interested in exploring
-                or getting to know the city more. It was created from the
-                perspective of someone who lived and worked in Hwaseong for 3
-                years.
+                1-million man city.
+                <span className="blue">[3]</span> As Hwaseong is quickly growing
+                and developing, many more people will be interested in or moving
+                to Hwaseong. When I moved to Hwaseong in 2020, there was barely
+                any English information about Hwaseong City. This guide was
+                created to help those who are interested in exploring or getting
+                to know the city more. It was created from the perspective of
+                someone who lived and worked in Hwaseong for 3 years.
               </p>
             </div>
             {/* Photo gallery */}
+            <div className="aboutPhotoGalleryTitle">
+              <h3>Snapshots of Hwaseong</h3>
+            </div>
             <div className="aboutPhotoGallery">
               <img src="" className="aboutPhotoGalleryItem"></img>
               <img src="" className="aboutPhotoGalleryItem"></img>
               <img src="" className="aboutPhotoGalleryItem"></img>
             </div>
-            <h3>Main Attractions</h3>
-            <div></div>
           </div>
         </div>
       </div>
