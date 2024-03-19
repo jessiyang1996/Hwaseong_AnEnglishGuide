@@ -10,7 +10,7 @@ function LoginPage() {
   return (
     <div className="loginPageEntireDiv">
       <LoginForm />
-
+      {/* Register Button */}
       <center>
         <button
           type="button"
@@ -22,6 +22,8 @@ function LoginPage() {
           Register
         </button>
       </center>
+
+      {/* end of Register Button */}
     </div>
   );
 }
