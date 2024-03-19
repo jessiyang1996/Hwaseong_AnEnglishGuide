@@ -105,6 +105,7 @@ function AboutPage() {
               <img src="" className="aboutPhotoGalleryItem"></img>
               <img src="" className="aboutPhotoGalleryItem"></img>
             </div>
+            {/* end of photo gallery */}
           </div>
         </div>
       </div>

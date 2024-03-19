@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import './LandingPageOfficial.css';
 
 function LandingPageOfficial() {
@@ -14,30 +16,24 @@ function LandingPageOfficial() {
             <nav>
               <ul>
                 <li>
-                  <a href="http://localhost:5173/#/" className="navLink">
+                  <Link to="/home" className="navLink">
                     HOME
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="http://localhost:5173/#/about" className="navLink">
+                  <Link to="/about" className="navLink">
                     ABOUT
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="http://localhost:5173/#/explore-hwaseong"
-                    className="navLink"
-                  >
+                  <Link to="/explore-hwaseong" className="navLink">
                     EXPLORE HWASEONG
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="http://localhost:5173/#/nearby-recommendations"
-                    className="navLink"
-                  >
+                  <Link to="/nearby-recommendations" className="navLink">
                     NEARBY RECOMMENDATIONS
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>

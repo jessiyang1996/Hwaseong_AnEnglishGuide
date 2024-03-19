@@ -35,18 +35,22 @@ function App() {
   return (
     <div>
       <Router>
-        <Nav />
         <div>
-          <Route path="/" exact>
+          <Nav />
+
+          {/* Visiting localhost:5173 will redirect to localhost:5173/home */}
+          <Redirect exact from="/" to="/home" />
+          <Route exact path="/home">
             <LandingPageOfficial />
             {/* <LandingPage /> */}
           </Route>
-          <Route path="/about" exact>
+          <Route exact path="/about">
             <AboutPage />
           </Route>
           <Route path="/admin" exact>
             <LoginPage />
           </Route>
+
           <Footer />
         </div>
       </Router>
