@@ -20,6 +20,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import LandingPageOfficial from '../LandingPageOfficial/LandingPageOfficial';
+import ExploreHwaseong from '../ExploreHwaseong/ExploreHwaseong';
 
 import './App.css';
 
@@ -49,6 +50,12 @@ function App() {
           </Route>
           <Route path="/admin" exact>
             <LoginPage />
+          </Route>
+          <Route path="/registration" exact>
+            <RegisterPage />
+          </Route>
+          <Route path="/explore-hwaseong">
+            <ExploreHwaseong />
           </Route>
 
           <Footer />
