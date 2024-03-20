@@ -28,7 +28,12 @@
   margin-left: 40px;
 }
 
-.loginFormInputFields {
+.alert {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .loginBtn {
@@ -38,6 +43,14 @@
 .loginPageContainer {
   width: 400px;
   background-color: rgb(255, 255, 255, 0.1);
+}
+
+.loginFormInputFields {
+  background-color: rgb(255, 255, 255, 0.4);
+}
+
+.loginFormInputFields::placeholder {
+  color: black;
 }
 
 .registerButton {
