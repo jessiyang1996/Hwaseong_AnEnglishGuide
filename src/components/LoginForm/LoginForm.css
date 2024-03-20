@@ -1,5 +1,5 @@
 .formPanel {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -16,4 +16,8 @@
 }
 
 .loginFormInputFields {
+}
+
+.loginBtn {
+  margin-top: 10px;
 }

@@ -15,3 +15,7 @@
   width: 400px;
   background-color: rgb(255, 255, 255, 0.1);
 }
+
+.registerButton {
+  margin-bottom: 10px;
+}
