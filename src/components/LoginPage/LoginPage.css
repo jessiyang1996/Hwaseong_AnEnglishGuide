@@ -11,6 +11,30 @@
   height: 900px;
 }
 
+.formPanel {
+  margin-bottom: 30px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginFormTitle {
+  text-align: center;
+}
+
+.loginFormSetMargins {
+  margin-left: 40px;
+}
+
+.loginFormInputFields {
+}
+
+.loginBtn {
+  margin-top: 10px;
+}
+
 .loginPageContainer {
   width: 400px;
   background-color: rgb(255, 255, 255, 0.1);
