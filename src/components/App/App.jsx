@@ -20,6 +20,8 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import LandingPageOfficial from '../LandingPageOfficial/LandingPageOfficial';
 import ExploreHwaseong from '../ExploreHwaseong/ExploreHwaseong';
+import AdminDashboard from '../AdminDashboard/AdminDashboard';
+// import SwitchNavBar from '../SwitchNavBar/SwitchNavBar';
 
 import './App.css';
 
@@ -36,10 +38,13 @@ function App() {
     <div>
       <Router>
         <div>
+          {/* <SwitchNavBar> */}
           <Nav />
+          {/* </SwitchNavBar> */}
 
           {/* Visiting localhost:5173 will redirect to localhost:5173/home */}
           <Redirect exact from="/" to="/home" />
+
           <Route exact path="/home">
             <LandingPageOfficial />
             {/* <LandingPage /> */}
@@ -56,6 +61,14 @@ function App() {
           <Route path="/explore-hwaseong">
             <ExploreHwaseong />
           </Route>
+
+          {/* For protected routes, the view could show one of several things on the same route.
+            Visiting localhost:5173/user will show the UserPage if the user is logged in.
+            If the user is not logged in, the ProtectedRoute will show the LoginPage (component).
+            Even though it seems like they are different pages, the user is always on localhost:5173/user */}
+          <ProtectedRoute exact path="/admin-dashboard">
+            <AdminDashboard />
+          </ProtectedRoute>
 
           <Footer />
         </div>

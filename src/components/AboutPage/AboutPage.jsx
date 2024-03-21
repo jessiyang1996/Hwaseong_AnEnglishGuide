@@ -48,7 +48,6 @@ function AboutPage() {
                   industry in Hwaseong is the fishing industry. As it is next to
                   the Yellow Sea, seafood plays a big part in Hwaseong's
                   identity and economy.
-                  <p></p>
                 </p>
                 <h3>History and the Creation of Hwaseong City</h3>
                 <p>
