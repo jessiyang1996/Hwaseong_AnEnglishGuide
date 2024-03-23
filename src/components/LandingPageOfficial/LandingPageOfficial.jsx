@@ -1,45 +1,21 @@
 import { Link } from 'react-router-dom';
 
 import './LandingPageOfficial.css';
+import Nav from '../Nav/Nav';
 
 function LandingPageOfficial() {
   return (
     <div>
       <div className="banner">
         {/* Header Image */}
-        <div className="mainHeaderImage"></div>
-        {/* end of image banner div */}
-        {/* Navigation Bar */}
-        <div className="navigationBarContainer">
-          <img src="/images/logo.png" className="navigationLogo"></img>
-          <div className="navLinkContainer">
-            <nav>
-              <ul>
-                <li>
-                  <Link to="/home" className="navLink">
-                    HOME
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/about" className="navLink">
-                    ABOUT
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/explore-hwaseong" className="navLink">
-                    EXPLORE HWASEONG
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/nearby-recommendations" className="navLink">
-                    NEARBY RECOMMENDATIONS
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
+        <div>
+          <img src="/images/IMG_9440.jpg" className="mainHeaderImage"></img>
         </div>
-        {/* end of navigation bar */}
+        {/* I need to include the Nav on the homepage because I have my Nav as absolute. Because of this, 
+        it is trying to position itself to an empty div and is not appearing on home page */}
+        <div className="navigationBarContainer">
+          <Nav />
+        </div>
         <div className="descriptionDiv">
           <div className="sectionHeaderDiv">
             <h3>Explore Hwaseong City. </h3>

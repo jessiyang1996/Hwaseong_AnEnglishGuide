@@ -6,37 +6,12 @@ body {
 }
 .mainHeaderImage {
   position: relative;
-  background: url(/images/IMG_9440.jpg) no-repeat center;
-  background-size: cover;
   width: 100%;
   height: 900px;
   margin: 0px;
   overflow: hidden;
   object-fit: cover;
   background-position: 0 99%;
-}
-
-/* Navigation */
-.navigationBarContainer {
-  position: absolute;
-  margin-top: 30px;
-  top: 0%;
-  width: 100%;
-  /* background-color: red; */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navigationLogo {
-  height: 50px;
-  margin-left: 40px;
-}
-
-.navLinkContainer {
-  margin-right: 25px;
-
-  /* background-color: red; */
 }
 
 ul {

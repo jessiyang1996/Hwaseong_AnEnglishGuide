@@ -9,6 +9,16 @@
   justify-content: space-between;
 }
 
+.navigationLogo {
+  height: 50px;
+  margin-left: 40px;
+}
+
+.navLinkContainer {
+  margin-right: 25px;
+  /* background-color: red; */
+}
+
 .navLink {
   text-decoration: none;
   color: white;

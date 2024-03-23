@@ -21,7 +21,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import LandingPageOfficial from '../LandingPageOfficial/LandingPageOfficial';
 import ExploreHwaseong from '../ExploreHwaseong/ExploreHwaseong';
 import AdminDashboard from '../AdminDashboard/AdminDashboard';
-// import SwitchNavBar from '../SwitchNavBar/SwitchNavBar';
+// import HideNavBar from '../HideNavBar/HideNavBar';
 
 import './App.css';
 
@@ -38,9 +38,7 @@ function App() {
     <div>
       <Router>
         <div>
-          {/* <SwitchNavBar> */}
           <Nav />
-          {/* </SwitchNavBar> */}
 
           {/* Visiting localhost:5173 will redirect to localhost:5173/home */}
           <Redirect exact from="/" to="/home" />
