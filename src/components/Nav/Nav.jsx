@@ -61,21 +61,20 @@ function Nav() {
             <AccountCircleIcon className="navLink" onClick={toggleDropdown} />
           </>
         )}
-      </div>
-      {/* End of navLinkContainer */}
-
-      {/* DROPDOWN MENU */}
-      <div className="dropdownDiv">
-        {showDropdown && (
-          <div className="dropDownItemsDiv">
-            <Link to="/admin-dashboard" className="dropdownItem">
-              Dashboard
-            </Link>
-            <LogOutButton id="logOutButton" className="dropdownItem" />
-          </div>
-        )}
+        {/* DROPDOWN MENU */}
+        <div className="dropdownDiv">
+          {showDropdown && (
+            <div className="dropDownItemsDiv">
+              <Link to="/admin-dashboard" className="dropdownItem">
+                Dashboard
+              </Link>
+              <LogOutButton id="logOutButton" className="dropdownItem" />
+            </div>
+          )}
+        </div>
       </div>
       {/* End of DROPDOWN MENU */}
+      {/* End of navLinkContainer */}
     </div>
   );
 }

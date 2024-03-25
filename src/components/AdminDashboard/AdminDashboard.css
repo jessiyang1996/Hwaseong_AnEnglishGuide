@@ -1,3 +1,18 @@
 .adminDashboardDiv {
   background-color: red;
+  padding: 100px;
+}
+.adminDashboardHeader {
+  text-align: center;
+}
+
+.adminDashContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.adminDashAddButton {
+  margin-right: 5px;
+  background-color: rgb(255, 149, 0);
 }

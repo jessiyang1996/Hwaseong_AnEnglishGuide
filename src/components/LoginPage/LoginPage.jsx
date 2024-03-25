@@ -24,6 +24,8 @@ function LoginPage() {
           password: password,
         },
       });
+      // redirect user to the admin dashboard
+      history.push('/admin-dashboard');
     } else {
       dispatch({ type: 'LOGIN_INPUT_ERROR' });
     }
