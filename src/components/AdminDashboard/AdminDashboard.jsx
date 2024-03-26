@@ -12,7 +12,7 @@ function AdminDashboard() {
   //on initial load
   useEffect(() => {
     axios
-      .get('/')
+      .get('/api/recommendations')
       .then((response) => {
         //send data to redux
         dispatch({

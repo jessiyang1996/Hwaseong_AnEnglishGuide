@@ -3,7 +3,7 @@ const router = express.Router();
 const pool = require('../modules/pool');
 
 router.get('/', (req, res) => {
-  const sqlText = ` SELECT * FROM "nearby_recommendation"
+  const sqlText = ` SELECT * FROM "nearby_recommendations"
   ORDER BY "location_name" DESC`;
 
   pool
