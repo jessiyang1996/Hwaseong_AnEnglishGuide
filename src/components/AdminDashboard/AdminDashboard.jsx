@@ -1,5 +1,5 @@
 import './AdminDashboard.css';
-import '../RecommendationsItem/RecommendationsItem';
+import RecommendationsItem from '../RecommendationsItem/RecommendationsItem';
 
 import axios from 'axios'; // This is how we will make our server calls
 import { useSelector, useDispatch } from 'react-redux'; // This will allow us to access things in the store
