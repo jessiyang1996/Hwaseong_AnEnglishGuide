@@ -1,0 +1,13 @@
+.recommendationsItemDiv {
+  width: 100%;
+  display: flex;
+  background-color: blue;
+}
+
+.recommendationsItemContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: pink;
+  justify-content: space-between;
+}

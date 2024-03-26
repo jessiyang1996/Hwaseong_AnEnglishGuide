@@ -4,10 +4,22 @@ import RecommendationsItem from '../RecommendationsItem/RecommendationsItem';
 import axios from 'axios'; // This is how we will make our server calls
 import { useSelector, useDispatch } from 'react-redux'; // This will allow us to access things in the store
 import { useEffect } from 'react'; // this will allow us to load things on initial page load
+import { useHistory } from 'react-router-dom';
 
 function AdminDashboard() {
   const recommendationsList = useSelector((store) => store.recommendationsList);
   const dispatch = useDispatch();
+  const history = useHistory();
+
+  const adminDashAddButton = function () {
+    // TODO: Redirects to form for making a new post
+  };
+
+  function adminDashGoButton() {
+    // TODO: This button with go to the main Page
+    console.log('adminDashGoButton clicked');
+    history.push('/nearby-recommendations');
+  }
 
   //on initial load
   useEffect(() => {
@@ -34,8 +46,12 @@ function AdminDashboard() {
           <button type="button" className="adminDashAddButton">
             Add New Location
           </button>
-          <button type="button" className="adminDashHomeButton">
-            Go to Site
+          <button
+            type="button"
+            className="adminDashSeePostsButton"
+            onClick={adminDashGoButton}
+          >
+            Go to Posts
           </button>
         </div>
       </div>
