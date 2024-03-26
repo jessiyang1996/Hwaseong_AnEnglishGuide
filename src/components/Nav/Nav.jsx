@@ -1,5 +1,7 @@
 import './Nav.css';
 import React, { useState } from 'react';
+//useRef is used if we don't need to render a value
+//useEffect = initial load of component
 import LogOutButton from '../LogOutButton/LogOutButton';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';

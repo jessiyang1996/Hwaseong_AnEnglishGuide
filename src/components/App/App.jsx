@@ -27,6 +27,9 @@ import './App.css';
 
 function App() {
   const dispatch = useDispatch();
+  // const nearbyRecommendations = useState([]);
+
+  //TODO: GET nearby recommendation from server
 
   const user = useSelector((store) => store.user);
 
