@@ -1,14 +1,22 @@
 import './AddNewPost.css';
 
-import react from 'react';
+import { useState } from 'react';
+import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
 function AddNewPost() {
   const history = useHistory();
 
+  const [title, setTitle] = useState('');
+  const [image, setImage] = useState('');
+  const [category, setCategory] = useState('');
+  const [koreanAddress, setKoreanAddress] = useState('');
+  const [address, setAddress] = useState('');
+  const [description, setDescription] = useState('');
+
   function handleBackToDashboard(event) {
     event.preventDefault();
-    console.log('in handleBackToDashboard()');
+    // console.log('in handleBackToDashboard()');
     history.push('/admin-dashboard');
   }
 
