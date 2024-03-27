@@ -5,7 +5,7 @@ const pool = require('../modules/pool');
 // GET ROUTE
 router.get('/', (req, res) => {
   const sqlText = ` SELECT * FROM "nearby_recommendations"
-  ORDER BY "location_name" DESC`;
+  ORDER BY "location_name" ASC`;
 
   pool
     .query(sqlText)
