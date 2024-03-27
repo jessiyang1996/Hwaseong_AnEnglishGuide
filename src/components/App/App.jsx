@@ -21,6 +21,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import LandingPageOfficial from '../LandingPageOfficial/LandingPageOfficial';
 import ExploreHwaseong from '../ExploreHwaseong/ExploreHwaseong';
 import AdminDashboard from '../AdminDashboard/AdminDashboard';
+import AddNewPost from '../AddNewPost/AddNewPost';
 // import HideNavBar from '../HideNavBar/HideNavBar';
 
 import './App.css';
@@ -59,8 +60,11 @@ function App() {
           <Route path="/registration" exact>
             <RegisterPage />
           </Route>
-          <Route path="/explore-hwaseong">
+          <Route path="/explore-hwaseong" exact>
             <ExploreHwaseong />
+          </Route>
+          <Route path="/new-post" exact>
+            <AddNewPost />
           </Route>
 
           {/* For protected routes, the view could show one of several things on the same route.

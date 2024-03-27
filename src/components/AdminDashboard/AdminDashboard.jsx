@@ -13,11 +13,13 @@ function AdminDashboard() {
 
   const adminDashAddButton = function () {
     // TODO: Redirects to form for making a new post
+    // console.log('adminDashAddButton clicked');
+    history.push('/new-post');
   };
 
   function adminDashGoButton() {
-    // TODO: This button with go to the main Page
-    console.log('adminDashGoButton clicked');
+    // This button will go to the nearby recommendations page
+    // console.log('adminDashGoButton clicked');
     history.push('/nearby-recommendations');
   }
 
@@ -43,7 +45,11 @@ function AdminDashboard() {
       <div className="adminDashContainer">
         <h2>Posts</h2>
         <div className="adminDashHeaderTitle">
-          <button type="button" className="adminDashAddButton">
+          <button
+            type="button"
+            className="adminDashAddButton"
+            onClick={adminDashAddButton}
+          >
             Add New Location
           </button>
           <button

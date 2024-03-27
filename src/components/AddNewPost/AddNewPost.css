@@ -1,0 +1,24 @@
+.newPostDiv {
+  margin-top: 200px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.topNavigatorButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.newPostHeader {
+  text-align: center;
+}
+
+.newPostFormDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.newPostForm {
+  background-color: green;
+}
