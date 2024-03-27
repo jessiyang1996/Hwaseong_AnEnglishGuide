@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
 
+// GET ROUTE
 router.get('/', (req, res) => {
   const sqlText = ` SELECT * FROM "nearby_recommendations"
   ORDER BY "location_name" DESC`;
@@ -20,11 +21,32 @@ router.get('/', (req, res) => {
     });
 });
 
-/**
- * POST route template
- */
+// POST ROUTE
 router.post('/', (req, res) => {
-  // POST route code here
+  console.log('POST /api/recommendations: ', req.body);
+  const sqlText =
+    'INSERT INTO "nearby_recommendations" ("location_name", "korean_address", "address", "category", "description", "header_image") VALUES($1,$2,$3,$4,$5,$6)';
+
+  pool
+    .query(sqlText, [
+      req.body.location_name,
+      req.body.korean_address,
+      req.body.address,
+      req.body.category,
+      req.body.description,
+      req.body.header_image,
+    ])
+    .then((dbResponse) => {
+      res.sendStatus(201);
+    })
+    .catch((dbError) => {
+      console.log('error adding new recommendation: ', dbError);
+      res.sendStatus(500);
+    });
 });
+
+//UPDATE ROUTE
+
+//DELETE ROUTE
 
 module.exports = router;
