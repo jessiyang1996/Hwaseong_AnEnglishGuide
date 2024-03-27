@@ -48,5 +48,21 @@ router.post('/', (req, res) => {
 //UPDATE ROUTE
 
 //DELETE ROUTE
+router.delete('/:id', (req, res) => {
+  console.log('in DELETE route: ', req.body);
+  const { id } = req.params;
+  const sqlTest = 'DELETE FROM "nearby_recommendations" WHERE "id" = $1';
 
+  const sqlValues = [id];
+
+  pool
+    .query(sqlText, sqlValues)
+    .then((dbRes) => {
+      res.sendStatus(201);
+    })
+    .catch((dbError) => {
+      console.log('Error removing recommendation: ', dbError);
+      res.sendStatus(500);
+    });
+});
 module.exports = router;
