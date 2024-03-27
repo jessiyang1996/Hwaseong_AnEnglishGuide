@@ -1,20 +1,38 @@
 import './AddNewPost.css';
 
 import react from 'react';
+import { useHistory } from 'react-router-dom';
 
-const AddNewPost = function () {
+function AddNewPost() {
+  const history = useHistory();
+
+  function handleBackToDashboard(event) {
+    event.preventDefault();
+    console.log('in handleBackToDashboard()');
+    history.push('/admin-dashboard');
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); // prevents the page from refreshing
+
+    console.log('submit button was pressed');
+  };
   return (
     <div className="newPostDiv">
       <h1 className="newPostHeader">Add New Post</h1>
       <div className="topNavigatorButtons">
-        <button type="button">Go Back to Dashboard</button>
-        <button type="button">Publish</button>
+        <button type="button" onClick={handleBackToDashboard}>
+          Go Back to Dashboard
+        </button>
+        <button type="button" onClick={handleSubmit}>
+          Publish
+        </button>
       </div>
       <div className="newPostFormDiv">
         <form className="newPostForm">
           <div className="addPostTitleDiv">
             <label htmlFor="title">Title: </label>
-            <input type="text" id="title" name="title" required></input>
+            <input id="title" name="title" required></input>
           </div>
           {/* TODO: INTEGRATE AN API TO SO THE UPLOADING IMAGE */}
           <div className="newPostAddPhotoDiv">
@@ -29,22 +47,28 @@ const AddNewPost = function () {
               <option value="Explore">Explore</option>
             </select>
           </div>
-          <label htmlFor="koreanAddress">Korean Address: </label>
-          <input
-            type="text"
-            id="koreanAddress"
-            name="koreanAddress"
-            required
-          ></input>
-          <label htmlFor="address">Address: </label>
-          <input type="text" id="address" name="address" required></input>
-
+          <div className="newPostAddressDiv">
+            <label htmlFor="koreanAddress">Korean Address: </label>
+            <textarea
+              id="koreanAddress"
+              name="koreanAddress"
+              required
+            ></textarea>
+            <label htmlFor="address">Address: </label>
+            <textarea id="address" name="address" required></textarea>
+          </div>
           <label htmlFor="content"></label>
-          <input type="text" id="content" name="content" required></input>
+          <textarea
+            id="content"
+            name="content"
+            rows="8"
+            cols="205"
+            required
+          ></textarea>
         </form>
       </div>
     </div>
   );
-};
+}
 
 export default AddNewPost;
