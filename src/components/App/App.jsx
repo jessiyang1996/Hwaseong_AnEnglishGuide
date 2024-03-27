@@ -22,7 +22,7 @@ import LandingPageOfficial from '../LandingPageOfficial/LandingPageOfficial';
 import ExploreHwaseong from '../ExploreHwaseong/ExploreHwaseong';
 import AdminDashboard from '../AdminDashboard/AdminDashboard';
 import AddNewPost from '../AddNewPost/AddNewPost';
-// import HideNavBar from '../HideNavBar/HideNavBar';
+import EditPost from '../EditPost/EditPost';
 
 import './App.css';
 
@@ -63,9 +63,6 @@ function App() {
           <Route path="/explore-hwaseong" exact>
             <ExploreHwaseong />
           </Route>
-          <Route path="/new-post" exact>
-            <AddNewPost />
-          </Route>
 
           {/* For protected routes, the view could show one of several things on the same route.
             Visiting localhost:5173/user will show the UserPage if the user is logged in.
@@ -73,6 +70,14 @@ function App() {
             Even though it seems like they are different pages, the user is always on localhost:5173/user */}
           <ProtectedRoute exact path="/admin-dashboard">
             <AdminDashboard />
+          </ProtectedRoute>
+
+          <ProtectedRoute path="/new-post" exact>
+            <AddNewPost />
+          </ProtectedRoute>
+
+          <ProtectedRoute path="/edit-post/:id" exact>
+            <EditPost />
           </ProtectedRoute>
 
           <Footer />
