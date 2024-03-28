@@ -8,7 +8,7 @@ function RecommendationsItem({ recommendation }) {
 
   function handleEditButton() {
     // console.log('edit post button was pressed');
-    history.push('/edit-page/:id');
+    history.push(`/edit-page/${recommendation.id}`);
   }
   return (
     <div className="recommendationsItemDiv">
