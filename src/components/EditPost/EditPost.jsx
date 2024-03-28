@@ -12,9 +12,13 @@ function EditPost() {
     console.log(typeof postId);
   }, [postId]);
 
+  //.find is an array method used to find the first element in an array that satisfies the provided testing function
+  // the id is turned into a string then goes through them until it finds the item id that we want
+  // recommendation holds the result of the .find
   const recommendation = recommendationsList.find(
     (item) => item.id.toString() === postId
   );
+
   console.log('recommendation', recommendation);
 
   return (
