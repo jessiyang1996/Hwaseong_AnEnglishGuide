@@ -9,13 +9,18 @@ function EditPost() {
 
   useEffect(() => {
     console.log('recommendationsList data: ', recommendationsList);
-    console.log('postID: ', postId);
+    console.log(typeof postId);
   }, [postId]);
+
+  const recommendation = recommendationsList.find(
+    (item) => item.id.toString() === postId
+  );
+  console.log('recommendation', recommendation);
 
   return (
     <div>
       <p>this is a test</p>
-      <h1>{recommendationsList[postId].location_name}</h1>
+      <h1>{recommendation.location_name}</h1>
     </div>
   );
 }
