@@ -1,6 +1,7 @@
 // this component will be for the nearby recommendations list on the admin dashboard
 import './RecommendationsItem.css';
 
+import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
 function RecommendationsItem({ recommendation }) {
