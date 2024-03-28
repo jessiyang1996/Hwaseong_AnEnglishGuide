@@ -14,6 +14,7 @@ function RecommendationsItem({ recommendation }) {
     //   recommendation.id
     // ); // confirmed that the id was being passed correctly
     history.push(`/edit-post/${recommendation.id}`);
+    //TODO send the item we clicked to the store
   }
 
   //TODO: CREATE HANDLE DELETE

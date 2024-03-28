@@ -30,7 +30,7 @@ function AdminDashboard() {
       .then((response) => {
         //send data to redux
         dispatch({
-          type: 'SET_RECOMMENDATIONS',
+          type: 'SET_RECOMMENDATIONS_LIST',
           payload: response.data,
         });
       })

@@ -25,17 +25,30 @@ import AddNewPost from '../AddNewPost/AddNewPost';
 import EditPost from '../EditPost/EditPost';
 
 import './App.css';
+import axios from 'axios';
 
 function App() {
   const dispatch = useDispatch();
   // const nearbyRecommendations = useState([]);
 
-  //TODO: GET nearby recommendation from server
+  const fetchRecommendationsList = () => {
+    dispatch({ type: '' });
+
+    axios
+      .get('/api/recommendations')
+      .then((response) => {
+        dispatch({ type: 'SET_RECOMMENDATIONS_LIST', payload: response.data });
+      })
+      .catch((error) => {
+        console.log('ERROR in fetchRecommendationsList(): ', error);
+      });
+  }; // end of fetchRecommendationsList()
 
   const user = useSelector((store) => store.user);
 
   useEffect(() => {
     dispatch({ type: 'FETCH_USER' });
+    fetchRecommendationsList;
   }, [dispatch]);
 
   return (

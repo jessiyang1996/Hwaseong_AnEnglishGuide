@@ -9,7 +9,7 @@ import user from './user.reducer';
 const recommendationsList = (state = [], action) => {
   // set recommendationsList with data from server
   switch (action.type) {
-    case 'SET_RECOMMENDATIONS':
+    case 'SET_RECOMMENDATIONS_LIST':
       return action.payload;
     default:
       return state;
