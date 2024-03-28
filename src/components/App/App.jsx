@@ -22,6 +22,8 @@ import LandingPageOfficial from '../LandingPageOfficial/LandingPageOfficial';
 import ExploreHwaseong from '../ExploreHwaseong/ExploreHwaseong';
 import AdminDashboard from '../AdminDashboard/AdminDashboard';
 import AddNewPost from '../AddNewPost/AddNewPost';
+import NearbyRecommendations from '../NearbyRecommendations/NearbyRecommendations';
+
 import EditPost from '../EditPost/EditPost';
 
 import './App.css';
@@ -75,6 +77,9 @@ function App() {
           </Route>
           <Route path="/explore-hwaseong" exact>
             <ExploreHwaseong />
+          </Route>
+          <Route path="/nearby-recommendations">
+            <NearbyRecommendations />
           </Route>
 
           {/* For protected routes, the view could show one of several things on the same route.

@@ -12,7 +12,6 @@ function AdminDashboard() {
   const history = useHistory();
 
   const adminDashAddButton = function () {
-    // TODO: Redirects to form for making a new post
     // console.log('adminDashAddButton clicked');
     history.push('/new-post');
   };
