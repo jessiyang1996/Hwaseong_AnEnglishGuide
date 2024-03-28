@@ -75,7 +75,7 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
   console.log('in DELETE route: ', req.body);
   const { id } = req.params;
-  const sqlTest = 'DELETE FROM "nearby_recommendations" WHERE "id" = $1';
+  const sqlText = 'DELETE FROM "nearby_recommendations" WHERE "id" = $1';
 
   const sqlValues = [id];
 
