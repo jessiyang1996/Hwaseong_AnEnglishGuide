@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -8,11 +8,7 @@ import './EditPost.css';
 function EditPost() {
   const { postId } = useParams();
   const recommendationsList = useSelector((store) => store.recommendationsList);
-
-  // // creating variables for the input fields.
-  // const [locationName, setLocationName] = useState(
-  //   `${recommendation.location_Name}`
-  // );
+  const history = useHistory();
 
   function handleBackToDashboard(event) {
     event.preventDefault();
@@ -34,6 +30,17 @@ function EditPost() {
 
   console.log('recommendation', recommendation);
 
+  // creating variables for the input fields.
+  const [locationName, setLocationName] = useState(
+    `${recommendation.location_name}`
+  );
+
+  const [category, setCategory] = useState(`${recommendation.category}`);
+
+  // Tests:
+  // console.log('locationName: ', locationName);
+  // console.log('locationCategory: ', category);
+
   return (
     <div>
       <img
@@ -54,7 +61,7 @@ function EditPost() {
             <input
               id="title"
               name="title"
-              value={recommendation.location_name}
+              value={locationName}
               onChange={(event) => setLocationName(event.target.value)}
               required
             ></input>
