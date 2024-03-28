@@ -8,10 +8,10 @@ function EditPost() {
   const history = useHistory();
 
   useEffect(() => {
+    console.log('postId: ', postId);
     axios
-      .get(`/api/recommendations/${postId}`)
+      .get(`/edit-post/${postId}`)
       .then((response) => {
-        console.log(postId);
         setPost(response.data);
       })
       .catch((error) => {

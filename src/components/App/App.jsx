@@ -76,7 +76,7 @@ function App() {
             <AddNewPost />
           </ProtectedRoute>
 
-          <ProtectedRoute path="/edit-post/" exact>
+          <ProtectedRoute path="/edit-post/:postId" exact>
             <EditPost />
           </ProtectedRoute>
 

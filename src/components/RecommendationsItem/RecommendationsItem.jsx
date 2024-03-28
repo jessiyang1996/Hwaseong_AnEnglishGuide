@@ -8,12 +8,25 @@ function RecommendationsItem({ recommendation }) {
 
   function handleEditButton() {
     // console.log('edit post button was pressed');
-    history.push(`/edit-page/${recommendation.id}`);
+    // console.log(
+    //   'recommendation ID rom the handleEditButton: ',
+    //   recommendation.id
+    // ); // confirmed that the id was being passed correctly
+    history.push(`/edit-post/${recommendation.id}`);
   }
 
   //TODO: CREATE HANDLE DELETE
   function handleDeleteButton() {
     console.log('in handleDeleteButton()');
+    axios
+      .delete(`/api/recommendations/${recommendation.id}`)
+      .then(() => {
+        // get data from server (refresh the list)
+      })
+      .catch((error) => {
+        console.log('Error in DELETE route: ', error);
+        alert('Something went wrong! Look at the console');
+      });
   }
   return (
     <div className="recommendationsItemDiv">
