@@ -10,6 +10,11 @@ function RecommendationsItem({ recommendation }) {
     // console.log('edit post button was pressed');
     history.push(`/edit-page/${recommendation.id}`);
   }
+
+  //TODO: CREATE HANDLE DELETE
+  function handleDeleteButton() {
+    console.log('in handleDeleteButton()');
+  }
   return (
     <div className="recommendationsItemDiv">
       <ul>
@@ -20,7 +25,9 @@ function RecommendationsItem({ recommendation }) {
               <button type="button" onClick={handleEditButton}>
                 Edit
               </button>
-              <button type="button">Delete</button>
+              <button type="button" onClick={handleDeleteButton}>
+                Delete
+              </button>
             </div>
           </div>
         </li>
