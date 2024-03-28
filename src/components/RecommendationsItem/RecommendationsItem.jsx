@@ -28,6 +28,7 @@ function RecommendationsItem({ recommendation }) {
         console.log('Error in DELETE route: ', error);
         alert('Something went wrong! Look at the console');
       });
+    // refresh the data (GET the updated list from the server)
   }
   return (
     <div className="recommendationsItemDiv">
