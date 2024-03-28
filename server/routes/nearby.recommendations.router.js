@@ -45,8 +45,31 @@ router.post('/', (req, res) => {
     });
 });
 
-//UPDATE ROUTE
+//UPDATE (PUT) ROUTE
 // TODO: WRITE UPDATE ROUTE!
+router.put('/:id', (req, res) => {
+  console.log('PUT Route /api/recommendations', req.params, req.body);
+  let queryText = `UPDATE "nearby_recommendations" SET "location_name" = $1, "korean_address" = $2, "address" =$3, "category" =$4, "description" = $5, "header_image" = $6 WHERE "id"= $7`;
+  sqlValues = [
+    req.body.location_name,
+    req.body.korean_address,
+    req.body.address,
+    req.body.category,
+    req.body.description,
+    req.body.header_image,
+    req.body.id,
+  ];
+
+  pool
+    .query(queryText, sqlValues)
+    .then((result) => {
+      res.sendStatus(200);
+    })
+    .catch((error) => {
+      console.log('Error in PUT /api/recommendations: ', error);
+      res.sendStatus(500);
+    });
+});
 
 //DELETE ROUTE
 router.delete('/:id', (req, res) => {
