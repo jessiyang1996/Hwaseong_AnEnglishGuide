@@ -20,11 +20,40 @@ function AddNewPost() {
     history.push('/admin-dashboard');
   }
 
-  const handleSubmit = (event) => {
-    event.preventDefault(); // prevents the page from refreshing
+  function sendNewPostToServer(event) {
+    console.log('in sendNewPostToServer()');
+    event.preventDefault();
 
-    console.log('submit button was pressed');
-  };
+    let location_title = document.querySelector('#title').value;
+    let location_koreanAddress = document.querySelector('#koreanAddress').value;
+    let location_address = document.querySelector('#address').value;
+    let location_category = document.querySelector('#category').value;
+    let location_content = document.querySelector('#content').value;
+    // let location_headerImage = document.querySelector('#_____').value;
+
+    // console.log('location_title', location_title);
+    // console.log('location_koreanAddress', location_koreanAddress);
+    // console.log('location_address', location_address);
+    // console.log('location_category ', location_category);
+    // console.log('location_content', location_content);
+
+    axios
+      .post('', {
+        location_name: location_title,
+        korean_address: location_koreanAddress,
+        address: location_address,
+        category: location_category,
+        description: location_content,
+      })
+      .then((response) => {
+        console.log('POST was successful!');
+        alert('Success! The new post was added.');
+      })
+      .catch((error) => {
+        console.log('Error in POST route: ', error);
+        alert('Post was unsuccessful! Please try again');
+      });
+  }
   return (
     <div className="newPostDiv">
       <h1 className="newPostHeader">Add New Post</h1>
@@ -32,7 +61,7 @@ function AddNewPost() {
         <button type="button" onClick={handleBackToDashboard}>
           Go Back to Dashboard
         </button>
-        <button type="button" onClick={handleSubmit}>
+        <button type="button" onClick={sendNewPostToServer}>
           Publish
         </button>
       </div>

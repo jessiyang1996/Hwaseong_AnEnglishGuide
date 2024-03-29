@@ -16,6 +16,38 @@ function EditPost() {
     history.push('/admin-dashboard');
   }
 
+  // TODO: Send updated post to server then send an alert letting the client know that it was successful
+  function sendUpdatedPostToServer(event) {
+    console.log('in sendUpdatedPostToServer()');
+    event.preventDefault();
+
+    let location_title = document.querySelector('#title').value;
+    let location_koreanAddress = document.querySelector('#koreanAddress').value;
+    let location_address = document.querySelector('#address').value;
+    let location_category = document.querySelector('#category').value;
+    let location_content = document.querySelector('#content').value;
+    // let location_headerImage = document.querySelector('#_____').value;
+
+    // console.log('location_title', location_title);
+    // console.log('location_koreanAddress', location_koreanAddress);
+    // console.log('location_address', location_address);
+    // console.log('location_category ', location_category);
+    // console.log('location_content', location_content);
+
+    axios
+      .post('', {
+        location_name: location_title,
+        korean_address: location_koreanAddress,
+        address: location_address,
+        category: location_category,
+        description: location_content,
+      })
+      .then((response) => {
+        console.log('POST was successful!');
+        alert('Update was ');
+      });
+  }
+
   useEffect(() => {
     console.log('recommendationsList data: ', recommendationsList);
     console.log(typeof postId);
@@ -57,7 +89,9 @@ function EditPost() {
         <button type="button" onClick={handleBackToDashboard}>
           Go Back to Dashboard
         </button>
-        <button type="button">Publish</button>
+        <button type="button" onClick={sendUpdatedPostToServer}>
+          Update Post
+        </button>
       </div>
       <div className="newPostFormDiv">
         <form className="newPostForm">
