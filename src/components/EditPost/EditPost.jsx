@@ -32,10 +32,15 @@ function EditPost() {
 
   // creating variables for the input fields.
   const [locationName, setLocationName] = useState(
-    `${recommendation.location_name}`
+    recommendation.location_name
   );
 
-  const [category, setCategory] = useState(`${recommendation.category}`);
+  const [category, setCategory] = useState(recommendation.category);
+  const [koreanAddress, setKoreanAddress] = useState(
+    `${recommendation.korean_address}`
+  );
+  const [address, setAddress] = useState(recommendation.address);
+  const [description, setDescription] = useState(recommendation.description);
 
   // Tests:
   // console.log('locationName: ', locationName);
@@ -72,7 +77,13 @@ function EditPost() {
           </div>
           <div className="newPostCategoryDiv">
             <label htmlFor="category">Category: </label>
-            <select id="category" name="category" required>
+            <select
+              id="category"
+              name="category"
+              value={category}
+              onChange={(event) => setCategory(event.target.value)}
+              required
+            >
               <option value="restaurant">Restaurant</option>
               <option value="cafe">Cafe</option>
               <option value="shopping">Shopping</option>
@@ -84,10 +95,18 @@ function EditPost() {
             <textarea
               id="koreanAddress"
               name="koreanAddress"
+              value={koreanAddress}
+              onChange={(event) => setKoreanAddress(event.target.value)}
               required
             ></textarea>
             <label htmlFor="address">Address: </label>
-            <textarea id="address" name="address" required></textarea>
+            <textarea
+              id="address"
+              name="address"
+              value={address}
+              onChange={(event) => setAddress(event.target.value)}
+              required
+            ></textarea>
           </div>
           <label htmlFor="content"></label>
           <textarea
@@ -95,6 +114,8 @@ function EditPost() {
             name="content"
             rows="8"
             cols="205"
+            value={description}
+            onChange={(event) => setDescription(event.target.value)}
             required
           ></textarea>
         </form>

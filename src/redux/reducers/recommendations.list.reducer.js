@@ -1,5 +1,5 @@
 //reducer used to store Nearby Recommendations list returned from the server
-const recommendationsListReducer = (state = [], action) => {
+const recommendationsList = (state = [], action) => {
   // set recommendationsList with data from server
   switch (action.type) {
     case 'SET_RECOMMENDATIONS_LIST':
@@ -9,4 +9,4 @@ const recommendationsListReducer = (state = [], action) => {
   }
 };
 
-export default recommendationsListReducer;
+export default recommendationsList;
