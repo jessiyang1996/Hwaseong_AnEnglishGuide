@@ -22,8 +22,7 @@ function AdminDashboard() {
     history.push('/nearby-recommendations');
   }
 
-  //on initial load
-  useEffect(() => {
+  const fetchRecommendationsList = () => {
     axios
       .get('/api/recommendations')
       .then((response) => {
@@ -36,6 +35,11 @@ function AdminDashboard() {
       .catch((error) => {
         console.log('error in GET nearby recommendations: ', error);
       });
+  };
+
+  //on initial load
+  useEffect(() => {
+    fetchRecommendationsList();
   }, []); // end of useEffect
 
   return (

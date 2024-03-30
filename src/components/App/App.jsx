@@ -34,24 +34,15 @@ function App() {
   // const nearbyRecommendations = useState([]);
 
   const fetchRecommendationsList = () => {
-    dispatch({ type: '' });
-
-    axios
-      .get('/api/recommendations')
-      .then((response) => {
-        dispatch({ type: 'SET_RECOMMENDATIONS_LIST', payload: response.data });
-      })
-      .catch((error) => {
-        console.log('ERROR in fetchRecommendationsList(): ', error);
-      });
+    dispatch({ type: 'FETCH_RECOMMENDATIONS_LIST' });
   }; // end of fetchRecommendationsList()
 
   const user = useSelector((store) => store.user);
 
   useEffect(() => {
     dispatch({ type: 'FETCH_USER' });
-    fetchRecommendationsList;
-  }, [dispatch]);
+    fetchRecommendationsList();
+  }, []);
 
   return (
     <div>

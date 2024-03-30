@@ -1,8 +1,9 @@
-import './AddNewPost.css';
-
 import { useState } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
+
+import './AddNewPost.css';
+import AddNewPostForm from '../AddNewPostForm/AddNewPostForm';
 
 function AddNewPost() {
   const history = useHistory();
@@ -20,6 +21,7 @@ function AddNewPost() {
     history.push('/admin-dashboard');
   }
 
+  //FUNCTION TO SEND NEW POST TO SERVER
   function sendNewPostToServer(event) {
     console.log('in sendNewPostToServer()');
     event.preventDefault();
@@ -53,6 +55,8 @@ function AddNewPost() {
         console.log('Error in POST route: ', error);
         alert('Post was unsuccessful! Please try again');
       });
+
+    //CLEAR THE FORM
   }
   return (
     <div className="newPostDiv">
@@ -66,43 +70,7 @@ function AddNewPost() {
         </button>
       </div>
       <div className="newPostFormDiv">
-        <form className="newPostForm">
-          <div className="addPostTitleDiv">
-            <label htmlFor="title">Title: </label>
-            <input id="title" name="title" required></input>
-          </div>
-          {/* TODO: INTEGRATE AN API TO SO THE UPLOADING IMAGE */}
-          <div className="newPostAddPhotoDiv">
-            <button>Upload Image</button>
-          </div>
-          <div className="newPostCategoryDiv">
-            <label htmlFor="category">Category: </label>
-            <select id="category" name="category" required>
-              <option value="restaurant">Restaurant</option>
-              <option value="cafe">Cafe</option>
-              <option value="shopping">Shopping</option>
-              <option value="Explore">Explore</option>
-            </select>
-          </div>
-          <div className="newPostAddressDiv">
-            <label htmlFor="koreanAddress">Korean Address: </label>
-            <textarea
-              id="koreanAddress"
-              name="koreanAddress"
-              required
-            ></textarea>
-            <label htmlFor="address">Address: </label>
-            <textarea id="address" name="address" required></textarea>
-          </div>
-          <label htmlFor="content"></label>
-          <textarea
-            id="content"
-            name="content"
-            rows="8"
-            cols="205"
-            required
-          ></textarea>
-        </form>
+        <AddNewPostForm />
       </div>
     </div>
   );
