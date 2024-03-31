@@ -8,13 +8,6 @@ import AddNewPostForm from '../AddNewPostForm/AddNewPostForm';
 function AddNewPost() {
   const history = useHistory();
 
-  const [title, setTitle] = useState('');
-  const [image, setImage] = useState('');
-  const [category, setCategory] = useState('');
-  const [koreanAddress, setKoreanAddress] = useState('');
-  const [address, setAddress] = useState('');
-  const [description, setDescription] = useState('');
-
   function handleBackToDashboard(event) {
     event.preventDefault();
     // console.log('in handleBackToDashboard()');
@@ -31,7 +24,8 @@ function AddNewPost() {
     let location_address = document.querySelector('#address').value;
     let location_category = document.querySelector('#category').value;
     let location_content = document.querySelector('#content').value;
-    // let location_headerImage = document.querySelector('#_____').value;
+    let location_headerImage =
+      document.querySelector('.headerImageInput').value;
 
     // console.log('location_title', location_title);
     // console.log('location_koreanAddress', location_koreanAddress);
@@ -46,6 +40,7 @@ function AddNewPost() {
         address: location_address,
         category: location_category,
         description: location_content,
+        header_image: location_headerImage,
       })
       .then((response) => {
         console.log('POST was successful!');

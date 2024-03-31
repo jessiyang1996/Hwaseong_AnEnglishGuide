@@ -19,12 +19,12 @@ CREATE TABLE "nearby_recommendations" (
 
 -- Table for photos
 
-CREATE TABLE "recommendation_images" (
-	"id" SERIAL PRIMARY KEY,
-	"recommendation_id" INTEGER NOT NULL,
-	"name" VARCHAR(25) NOT NULL,
-	"image_src" VARCHAR(300) NOT NULL,
-); 
+--CREATE TABLE "recommendation_images" (
+--	"id" SERIAL PRIMARY KEY,
+--	"recommendation_id" INTEGER NOT NULL,
+--	"name" VARCHAR(25) NOT NULL,
+--	"image_src" VARCHAR(300) NOT NULL,
+--); 
 
 -- Add initial data to the Nearby Recommendation Locations:
 INSERT INTO "nearby_recommendations" ("location_name", "korean_address", "address", "category", "description", "header_image")
