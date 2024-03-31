@@ -9,25 +9,24 @@ function NearbyRecommendations() {
 
   //on initial load
   useEffect(() => {
-    axios
-      .get('/api/recommendations')
-      .then((response) => {
-        //send data to redux
-        dispatch({
-          type: 'SET_RECOMMENDATIONS_LIST',
-          payload: response.data,
-        });
-      })
-      .catch((error) => {
-        console.log('error in GET nearby recommendations: ', error);
-      });
-
-    console.log('recommendationsList: ', recommendationsList);
+    getElements();
   }, []); // end of useEffect
+
+  console.log(
+    'recommendationList from NearbyRecommendations: ',
+    recommendationsList
+  );
+
+  const getElements = () => {
+    dispatch({ type: 'FETCH_RECOMMENDATIONS_LIST' });
+  };
 
   return (
     <div>
-      <p> blah blah</p>
+      {/* map through the array of objects to display the list */}
+      {recommendationsList.map((recommendation) => (
+        <div></div>
+      ))}
     </div>
   );
 }

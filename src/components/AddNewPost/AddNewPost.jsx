@@ -34,7 +34,7 @@ function AddNewPost() {
     // console.log('location_content', location_content);
 
     axios
-      .post('', {
+      .post('/api/recommendations', {
         location_name: location_title,
         korean_address: location_koreanAddress,
         address: location_address,
