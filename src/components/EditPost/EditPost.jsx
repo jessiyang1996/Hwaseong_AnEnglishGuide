@@ -59,7 +59,8 @@ function EditPost() {
     let location_address = document.querySelector('#address').value;
     let location_category = document.querySelector('#category').value;
     let location_content = document.querySelector('#content').value;
-    let location_headerImage = document.querySelector('#_____').value;
+    let location_headerImage =
+      document.querySelector('.headerImageInput').value;
 
     // console.log('location_title', location_title);
     // console.log('location_koreanAddress', location_koreanAddress);
