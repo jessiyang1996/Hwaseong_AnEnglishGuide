@@ -16,6 +16,39 @@ function EditPost() {
     history.push('/admin-dashboard');
   }
 
+  const onFileChange = async (event) => {
+    //access the selected file
+    const fileToUpload = event.target.files[0];
+    // Limit user to specific file types
+    const acceptedImageTypes = [
+      'image/gif',
+      'image/jpeg',
+      'image/jpg',
+      'image/png',
+    ];
+
+    // Check if the file is one of the allowed types:
+    if (acceptedImageTypes.includes(fileToUpload.type)) {
+      const formData = new FormData();
+      formData.append('file', fileToUpload);
+      console.log('process.env: ', process.env.REACT_APP_CLOUD_NAME);
+      formData.append('upload_preset', process.env.REACT_APP_PRESET);
+      let postUrl = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_NAME}/image/upload`;
+      axios
+        .post(postUrl, formData)
+        .then((response) => {
+          console.log('Success!', response);
+          setImage(response.data.url);
+        })
+        .catch((error) => {
+          console.log('error', error);
+          alert('Something went wrong');
+        });
+    } else {
+      alert('Please select an image');
+    }
+  };
+
   // TODO: Send updated post to server then send an alert letting the client know that it was successful
   function sendUpdatedPostToServer(event) {
     console.log('in sendUpdatedPostToServer()');
@@ -26,7 +59,7 @@ function EditPost() {
     let location_address = document.querySelector('#address').value;
     let location_category = document.querySelector('#category').value;
     let location_content = document.querySelector('#content').value;
-    // let location_headerImage = document.querySelector('#_____').value;
+    let location_headerImage = document.querySelector('#_____').value;
 
     // console.log('location_title', location_title);
     // console.log('location_koreanAddress', location_koreanAddress);
@@ -35,16 +68,21 @@ function EditPost() {
     // console.log('location_content', location_content);
 
     axios
-      .post('', {
+      .put(`/api/recommendations/${recommendation.id}`, {
         location_name: location_title,
         korean_address: location_koreanAddress,
         address: location_address,
         category: location_category,
         description: location_content,
+        header_image: location_headerImage,
       })
       .then((response) => {
         console.log('POST was successful!');
-        alert('Update was ');
+        alert('Success! The new post was added.');
+      })
+      .catch((error) => {
+        console.log('Error in POST route: ', error);
+        alert('Post was unsuccessful! Please try again');
       });
   }
 
@@ -105,9 +143,14 @@ function EditPost() {
               required
             ></input>
           </div>
-          {/* TODO: INTEGRATE AN API TO SO THE UPLOADING IMAGE */}
           <div className="newPostAddPhotoDiv">
-            <button>Upload Image</button>
+            <p>Please select an image:</p>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={onFileChange}
+              className="headerImageInput"
+            ></input>
           </div>
           <div className="newPostCategoryDiv">
             <label htmlFor="category">Category: </label>

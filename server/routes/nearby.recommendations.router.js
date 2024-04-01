@@ -50,6 +50,7 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
   console.log('PUT Route /api/recommendations', req.params, req.body);
   let queryText = `UPDATE "nearby_recommendations" SET "location_name" = $1, "korean_address" = $2, "address" =$3, "category" =$4, "description" = $5, "header_image" = $6 WHERE "id"= $7`;
+
   sqlValues = [
     req.body.location_name,
     req.body.korean_address,
@@ -57,7 +58,7 @@ router.put('/:id', (req, res) => {
     req.body.category,
     req.body.description,
     req.body.header_image,
-    req.body.id,
+    req.params.id,
   ];
 
   pool

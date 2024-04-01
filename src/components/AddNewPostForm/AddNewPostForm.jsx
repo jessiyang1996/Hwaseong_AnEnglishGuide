@@ -10,7 +10,6 @@ function AddNewPostForm() {
   const [category, setCategory] = useState('');
   const [koreanAddress, setKoreanAddress] = useState('');
   const [address, setAddress] = useState('');
-  const [description, setDescription] = useState('');
 
   const onFileChange = async (event) => {
     //access the selected file
@@ -45,19 +44,6 @@ function AddNewPostForm() {
     }
   };
 
-  // const sendPhotoToServer = (event) => {
-  //   event.preventDefault();
-  //   // Send image path to YOUR server
-  //   axios
-  //     .post('/photos', { path: imagePath })
-  //     .then((response) => {
-  //       getImageList();
-  //     })
-  //     .catch((error) => {
-  //       console.error(error);
-  //       alert('Something went wrong!');
-  //     });
-  // };
   return (
     <>
       <form className="newPostForm">
@@ -70,7 +56,6 @@ function AddNewPostForm() {
             onChange={(event) => setTitle(event.target.value)}
           ></input>
         </div>
-        {/* TODO: INTEGRATE AN API TO SO THE UPLOADING IMAGE */}
         <div className="newPostAddPhotoDiv">
           <p>Please select an image:</p>
           <input

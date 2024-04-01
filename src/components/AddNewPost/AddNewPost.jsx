@@ -50,9 +50,8 @@ function AddNewPost() {
         console.log('Error in POST route: ', error);
         alert('Post was unsuccessful! Please try again');
       });
-
-    //CLEAR THE FORM
   }
+
   return (
     <div className="newPostDiv">
       <h1 className="newPostHeader">Add New Post</h1>
