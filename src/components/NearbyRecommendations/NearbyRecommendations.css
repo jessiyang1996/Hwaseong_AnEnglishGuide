@@ -11,6 +11,8 @@
   align-items: flex-end;
   margin-left: 15%;
   margin-right: 15%;
+  margin-bottom: 15px;
+  margin-top: 10px;
   /* background-color: red; */
 }
 
@@ -18,7 +20,6 @@
   width: 600px;
   height: 400px;
   object-fit: cover;
-  margin-bottom: 10px;
 }
 
 .nearyByRecommendationsDetailContainer {
