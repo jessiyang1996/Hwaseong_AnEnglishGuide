@@ -31,7 +31,7 @@ function RecommendationsItem({ recommendation }) {
           .then((response) => {
             dispatch({
               type: 'SET_RECOMMENDATIONS_LIST',
-              payload: 'response.data',
+              payload: response.data,
             });
           })
           .catch((error) => {
