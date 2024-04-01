@@ -1,5 +1,5 @@
 // this component will be for the nearby recommendations list on the admin dashboard
-import './RecommendationsItem.css';
+import './AdminDashboardRecommendationsItem.css';
 
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
@@ -38,10 +38,18 @@ function RecommendationsItem({ recommendation }) {
           <div className="recommendationsItemContainer">
             {recommendation.location_name}
             <div className="editDeleteButtons">
-              <button type="button" onClick={handleEditButton}>
+              <button
+                type="button"
+                onClick={handleEditButton}
+                className="adminEditButton"
+              >
                 Edit
               </button>
-              <button type="button" onClick={handleDeleteButton}>
+              <button
+                type="button"
+                onClick={handleDeleteButton}
+                className="adminDeleteButton"
+              >
                 Delete
               </button>
             </div>

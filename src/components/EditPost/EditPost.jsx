@@ -79,7 +79,7 @@ function EditPost() {
       })
       .then((response) => {
         console.log('POST was successful!');
-        alert('Success! The new post was added.');
+        alert('Success! The post was edited.');
       })
       .catch((error) => {
         console.log('Error in POST route: ', error);

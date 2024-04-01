@@ -1,5 +1,5 @@
 import './AdminDashboard.css';
-import RecommendationsItem from '../RecommendationsItem/RecommendationsItem';
+import AdminDashboardRecommendationsItem from '../AdminDashboardRecommendationsItem/AdminDashboardRecommendationsItem';
 
 import axios from 'axios'; // This is how we will make our server calls
 import { useSelector, useDispatch } from 'react-redux'; // This will allow us to access things in the store
@@ -43,40 +43,43 @@ function AdminDashboard() {
   }, []); // end of useEffect
 
   return (
-    <div className="adminDashboardDiv">
-      <h1 className="adminDashboardHeader">Admin Dashboard</h1>
-      <div className="adminDashContainer">
-        <h2>Posts</h2>
-        <div className="adminDashHeaderTitle">
-          <button
-            type="button"
-            className="adminDashAddButton"
-            onClick={adminDashAddButton}
-          >
-            Add New Location
-          </button>
-          <button
-            type="button"
-            className="adminDashSeePostsButton"
-            onClick={adminDashGoButton}
-          >
-            Go to Posts
-          </button>
+    <div>
+      <div className="headerBox"></div>
+      <div className="adminDashboardDiv">
+        <h1 className="adminDashboardHeader">Admin Dashboard</h1>
+        <div className="adminDashContainer">
+          <h2>Posts</h2>
+          <div className="adminDashHeaderTitle">
+            <button
+              type="button"
+              className="adminDashAddButton"
+              onClick={adminDashAddButton}
+            >
+              Add New Location
+            </button>
+            <button
+              type="button"
+              className="adminDashSeePostsButton"
+              onClick={adminDashGoButton}
+            >
+              Go to Posts
+            </button>
+          </div>
         </div>
-      </div>
-      {/* div for the post container */}
-      <div className="postContainer"></div>
-      <div className="adminDashListContainer">
-        <ul>
-          {/* .map will go here showing: title --> edit button -->delete button */}
-          {recommendationsList.map((recommendation) => (
-            // recommendations item
-            <RecommendationsItem
-              key={recommendationsList.id}
-              recommendation={recommendation}
-            ></RecommendationsItem>
-          ))}
-        </ul>
+        {/* div for the post container */}
+        <div className="postContainer"></div>
+        <div className="adminDashListContainer">
+          <ul>
+            {/* .map will go here showing: title --> edit button -->delete button */}
+            {recommendationsList.map((recommendation) => (
+              // recommendations item
+              <AdminDashboardRecommendationsItem
+                key={recommendationsList.id}
+                recommendation={recommendation}
+              ></AdminDashboardRecommendationsItem>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

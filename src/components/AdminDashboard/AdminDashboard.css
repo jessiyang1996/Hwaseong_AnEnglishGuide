@@ -1,7 +1,15 @@
 .adminDashboardDiv {
-  background-color: red;
-  padding: 100px;
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-bottom: 100px;
 }
+
+.headerBox {
+  width: 100%;
+  height: 140px;
+  background-color: black;
+}
+
 .adminDashboardHeader {
   text-align: center;
 }
