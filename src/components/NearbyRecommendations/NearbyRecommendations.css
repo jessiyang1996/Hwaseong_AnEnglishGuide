@@ -1,4 +1,27 @@
-.NearbyRecommendationsHeaderImage {
+.nearbyRecommendationsHeaderBoxContainer {
   width: 100%;
+  height: 250px;
+  background-color: black;
+  margin-bottom: 25px;
+}
+
+.nearbyRecommendationsListContainer {
+  display: flex;
+  justify-items: center;
+  align-items: flex-end;
+  margin-left: 15%;
+  margin-right: 15%;
+  /* background-color: red; */
+}
+
+.nearbyRecommendationsHeaderImage {
+  width: 600px;
   height: 400px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.nearyByRecommendationsDetailContainer {
+  width: 50%;
+  margin-left: 20px;
 }

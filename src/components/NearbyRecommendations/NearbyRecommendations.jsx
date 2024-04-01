@@ -25,20 +25,25 @@ function NearbyRecommendations() {
 
   return (
     <div>
+      <div className="nearbyRecommendationsHeaderBoxContainer"></div>
       {/* map through the array of objects to display the list */}
       {recommendationsList.map((recommendation) => (
-        <div className="">
-          <img
-            src={recommendation.header_image}
-            className="NearbyRecommendationsHeaderImage"
-          ></img>
-          <h3>{recommendation.location_name}</h3>
-          <div className="NearbyRecommendationsAddressesDiv">
-            <p>{recommendation.korean_address}</p>
-            <p>{recommendation.address}</p>
-            <p>{recommendation.description}</p>
+        <>
+          <div className="nearbyRecommendationsListContainer">
+            <img
+              src={recommendation.header_image}
+              className="nearbyRecommendationsHeaderImage"
+            ></img>
+            <div className="nearyByRecommendationsDetailContainer">
+              <h3>{recommendation.location_name}</h3>
+              <div className="NearbyRecommendationsAddressesDiv">
+                <p>{recommendation.korean_address}</p>
+                <p>{recommendation.address}</p>
+                <p>{recommendation.description}</p>
+              </div>
+            </div>
           </div>
-        </div>
+        </>
       ))}
     </div>
   );
