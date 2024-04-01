@@ -1,4 +1,5 @@
 //reducer used to store Nearby Recommendations list returned from the server
+
 const recommendationsList = (state = [], action) => {
   // set recommendationsList with data from server
   if (action.type === 'SET_RECOMMENDATIONS_LIST') {

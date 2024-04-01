@@ -1,4 +1,4 @@
-import { put } from 'redux-saga/effects';
+import { put, takeLatest } from 'redux-saga/effects';
 import axios from 'axios';
 
 function* fetchRecommendationsList() {
@@ -11,7 +11,7 @@ function* fetchRecommendationsList() {
     });
     yield put({
       type: 'SET_RECOMMENDATIONS_LIST',
-      payload: elementsResponse.data,
+      payload: recommendationResponse.data,
     });
   } catch (error) {
     console.log('ERROR: ', error);
@@ -22,4 +22,8 @@ function* fetchRecommendationsList() {
   }
 }
 
-export default fetchRecommendationsList;
+function* recommendationsSaga() {
+  yield takeLatest('FETCH_RECOMMENDATIONS_LIST', fetchRecommendationsList);
+}
+
+export default recommendationsSaga;
