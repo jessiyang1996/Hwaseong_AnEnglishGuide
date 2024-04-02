@@ -131,6 +131,7 @@ function EditPost() {
       <div className="editPostTopNavigatorButtons">
         <Button
           variant="outlined"
+          sx={{ marginTop: '30px', marginBottom: '10px' }}
           type="button"
           onClick={handleBackToDashboard}
         >
@@ -138,6 +139,7 @@ function EditPost() {
         </Button>
         <Button
           variant="outlined"
+          sx={{ marginTop: '30px', marginBottom: '10px' }}
           type="button"
           onClick={sendUpdatedPostToServer}
         >
