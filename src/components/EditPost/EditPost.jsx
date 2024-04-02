@@ -165,7 +165,7 @@ function EditPost() {
                       id="title"
                       name="title"
                       rows="1"
-                      cols="82"
+                      cols="111"
                       value={locationName}
                       onChange={(event) => setLocationName(event.target.value)}
                       required

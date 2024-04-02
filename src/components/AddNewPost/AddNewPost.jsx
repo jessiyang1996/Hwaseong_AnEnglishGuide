@@ -78,7 +78,7 @@ function AddNewPost() {
           </Button>
         </div>
         <Paper elevation={12}>
-          <Card variant="outlined" sx={{ padding: '20px' }}>
+          <Card variant="outlined" sx={{ padding: '60px' }}>
             <div className="newPostFormDiv">
               <h1 className="newPostHeader">Add New Location</h1>
               <AddNewPostForm />

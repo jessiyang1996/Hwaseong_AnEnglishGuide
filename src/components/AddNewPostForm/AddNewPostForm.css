@@ -15,6 +15,10 @@
   width: 70%;
 }
 
+.addPostTitleDiv {
+  display: flex;
+}
+
 .postDetails {
   max-width: 25%;
   /* background-color: pink; */

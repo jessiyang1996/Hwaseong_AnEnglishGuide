@@ -56,7 +56,7 @@ function AddNewPostForm() {
               id="title"
               name="title"
               rows="1"
-              cols="73"
+              cols="102"
               required
               placeholder="Location Name"
               onChange={(event) => setTitle(event.target.value)}
