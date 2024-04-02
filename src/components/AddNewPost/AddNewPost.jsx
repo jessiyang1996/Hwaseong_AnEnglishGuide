@@ -55,24 +55,31 @@ function AddNewPost() {
   }
 
   return (
-    <div className="newPostDiv">
-      <h1 className="newPostHeader">Add New Post</h1>
-      <div className="topNavigatorButtons">
-        <Button
-          variant="outlined"
-          type="button"
-          onClick={handleBackToDashboard}
-        >
-          Go Back to Dashboard
-        </Button>
-        <Button variant="outlined" type="button" onClick={sendNewPostToServer}>
-          Publish
-        </Button>
+    <>
+      <div className="newPostHeaderDiv"></div>
+      <div className="newPostDiv">
+        <h1 className="newPostHeader">Add New Post</h1>
+        <div className="topNavigatorButtons">
+          <Button
+            variant="outlined"
+            type="button"
+            onClick={handleBackToDashboard}
+          >
+            Go Back to Dashboard
+          </Button>
+          <Button
+            variant="outlined"
+            type="button"
+            onClick={sendNewPostToServer}
+          >
+            Publish
+          </Button>
+        </div>
+        <div className="newPostFormDiv">
+          <AddNewPostForm />
+        </div>
       </div>
-      <div className="newPostFormDiv">
-        <AddNewPostForm />
-      </div>
-    </div>
+    </>
   );
 }
 
