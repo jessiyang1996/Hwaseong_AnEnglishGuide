@@ -31,7 +31,7 @@ function RecommendationsItem({ recommendation }) {
           .get('/api/recommendations')
           .then((response) => {
             dispatch({
-              type: 'SET_RECOMMENDATIONS_LIST',
+              type: 'FETCH_RECOMMENDATIONS_LIST',
               payload: response.data,
             });
           })

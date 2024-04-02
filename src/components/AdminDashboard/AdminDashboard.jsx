@@ -33,7 +33,7 @@ function AdminDashboard() {
       .then((response) => {
         //send data to redux
         dispatch({
-          type: 'SET_RECOMMENDATIONS_LIST',
+          type: 'FETCH_RECOMMENDATIONS_LIST',
           payload: response.data,
         });
       })
@@ -72,10 +72,10 @@ function AdminDashboard() {
           </div>
         </div>
         {/* div for the post container */}
-        <div className="postContainer"></div>
-        <div className="adminDashListContainer">
-          <Paper elevation={10}>
-            <Card variant="outlined">
+        <Paper elevation={10}>
+          <Card variant="outlined" sx={{ padding: '15px' }}>
+            <div className="postContainer"></div>
+            <div className="adminDashListContainer">
               <ul>
                 {/* .map will go here showing: title --> edit button -->delete button */}
                 {recommendationsList.map((recommendation) => (
@@ -86,9 +86,9 @@ function AdminDashboard() {
                   ></AdminDashboardRecommendationsItem>
                 ))}
               </ul>
-            </Card>
-          </Paper>
-        </div>
+            </div>
+          </Card>
+        </Paper>
       </div>
     </div>
   );
