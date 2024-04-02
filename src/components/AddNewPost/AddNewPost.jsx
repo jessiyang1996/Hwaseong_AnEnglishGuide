@@ -2,6 +2,8 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
+import Button from '@mui/material/Button';
+
 import './AddNewPost.css';
 import AddNewPostForm from '../AddNewPostForm/AddNewPostForm';
 
@@ -56,12 +58,16 @@ function AddNewPost() {
     <div className="newPostDiv">
       <h1 className="newPostHeader">Add New Post</h1>
       <div className="topNavigatorButtons">
-        <button type="button" onClick={handleBackToDashboard}>
+        <Button
+          variant="outlined"
+          type="button"
+          onClick={handleBackToDashboard}
+        >
           Go Back to Dashboard
-        </button>
-        <button type="button" onClick={sendNewPostToServer}>
+        </Button>
+        <Button variant="outlined" type="button" onClick={sendNewPostToServer}>
           Publish
-        </button>
+        </Button>
       </div>
       <div className="newPostFormDiv">
         <AddNewPostForm />
