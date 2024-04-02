@@ -59,12 +59,12 @@ function AddNewPost() {
     <>
       <div className="newPostHeaderDiv"></div>
       <div className="newPostDiv">
-        <h1 className="newPostHeader">Add New Post</h1>
         <div className="topNavigatorButtons">
           <Button
             variant="outlined"
             type="button"
             onClick={handleBackToDashboard}
+            sx={{ marginTop: '30px' }}
           >
             Go Back to Dashboard
           </Button>
@@ -72,13 +72,15 @@ function AddNewPost() {
             variant="outlined"
             type="button"
             onClick={sendNewPostToServer}
+            sx={{ marginTop: '30px' }}
           >
             Publish
           </Button>
         </div>
         <Paper elevation={12}>
-          <Card variant="outlined">
+          <Card variant="outlined" sx={{ padding: '20px' }}>
             <div className="newPostFormDiv">
+              <h1 className="newPostHeader">Add New Location</h1>
               <AddNewPostForm />
             </div>
           </Card>

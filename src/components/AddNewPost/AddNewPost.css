@@ -5,8 +5,8 @@
 }
 
 .newPostDiv {
-  margin-right: 100px;
-  margin-left: 100px;
+  margin-right: 300px;
+  margin-left: 300px;
 }
 
 .topNavigatorButtons {
@@ -25,7 +25,7 @@
 }
 
 .newPostForm {
-  background-color: green;
+  /* background-color: rgba(0, 0, 0, 0.9); */
 }
 
 .newPostAddressDiv {

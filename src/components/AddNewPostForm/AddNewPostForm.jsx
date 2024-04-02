@@ -102,7 +102,7 @@ function AddNewPostForm() {
           id="content"
           name="content"
           rows="8"
-          cols="100"
+          cols="50"
           required
           onChange={(event) => setDescription(event.target.value)}
         ></textarea>
