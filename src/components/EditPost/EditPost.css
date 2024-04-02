@@ -12,6 +12,10 @@
 .editPostEntireContentDiv {
   padding-left: 250px;
   padding-right: 250px;
+  /* text-align: center;
+  /* display: flex; */
+  align-items: first baseline;
+  /* justify-content: space-between; */
 }
 
 .editPostTopNavigatorButtons {
@@ -23,9 +27,17 @@
 .editPostForm {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: first baseline;
+}
+
+.editPostTitleAndDescription {
+  width: 75%;
+}
+
+.editPostTitleDiv {
+  display: flex;
 }
 
 .editPostDetails {
-  /* display: flex; */
+  width: 19%;
 }

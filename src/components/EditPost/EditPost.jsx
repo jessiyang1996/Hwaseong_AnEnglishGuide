@@ -148,22 +148,24 @@ function EditPost() {
       </div>
       {/* Div for the recommendation content */}
       <div className="editPostEntireContentDiv">
-        <Paper elevation={10}>
-          <Card variant="outlined" sx={{ padding: '10px' }}>
+        <Paper elevation={12}>
+          <Card variant="outlined" sx={{ padding: '60px' }}>
             <h1 className="newPostHeader">
               Edit: {recommendation.location_name}
             </h1>
             <div className="newPostFormDiv">
               <form className="editPostForm">
                 {/* Div for title and description */}
-                <div className="titleAndDescription">
-                  <div className="addPostTitleDiv">
-                    <label htmlFor="title">Title: </label>
+                <div className="editPostTitleAndDescription">
+                  <div className="editPostTitleDiv">
+                    <label htmlFor="title" className="editPostTitle">
+                      Title:
+                    </label>
                     <textarea
                       id="title"
                       name="title"
                       rows="1"
-                      cols="55"
+                      cols="82"
                       value={locationName}
                       onChange={(event) => setLocationName(event.target.value)}
                       required
