@@ -7,6 +7,7 @@ import { useHistory } from 'react-router-dom';
 //Material UI imports
 import Card from '@mui/material/Card';
 import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
 
 import './AdminDashboard.css';
 import AdminDashboardRecommendationsItem from '../AdminDashboardRecommendationsItem/AdminDashboardRecommendationsItem';
@@ -55,20 +56,23 @@ function AdminDashboard() {
         <div className="adminDashContainer">
           <h2>Posts</h2>
           <div className="adminDashHeaderTitle">
-            <button
+            <Button
+              variant="outlined"
+              type="button"
+              className="adminDashSeePostsButton"
+              onClick={adminDashGoButton}
+              sx={{ marginRight: '9px' }}
+            >
+              Go to Posts
+            </Button>
+            <Button
+              variant="contained"
               type="button"
               className="adminDashAddButton"
               onClick={adminDashAddButton}
             >
               Add New Location
-            </button>
-            <button
-              type="button"
-              className="adminDashSeePostsButton"
-              onClick={adminDashGoButton}
-            >
-              Go to Posts
-            </button>
+            </Button>
           </div>
         </div>
         {/* div for the post container */}

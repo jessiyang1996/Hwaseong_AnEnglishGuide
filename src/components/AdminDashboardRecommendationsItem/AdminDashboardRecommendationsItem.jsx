@@ -67,7 +67,7 @@ function RecommendationsItem({ recommendation }) {
             type="button"
             onClick={handleDeleteButton}
             className="adminDeleteButton"
-            sx={{ marginLeft: '5px' }}
+            sx={{ marginLeft: '5px', marginRight: '15px' }}
           >
             Delete
           </Button>
