@@ -3,6 +3,10 @@ import { useParams, useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
+import Card from '@mui/material/Card';
+import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
+
 import './EditPost.css';
 
 function EditPost() {
@@ -123,80 +127,106 @@ function EditPost() {
         className="editPostHeaderImage"
         src={recommendation.header_image}
       ></img>
-      <h1 className="newPostHeader">Edit: {recommendation.location_name}</h1>
-      <div className="topNavigatorButtons">
-        <button type="button" onClick={handleBackToDashboard}>
+      {/* Div for top navigation buttons */}
+      <div className="editPostTopNavigatorButtons">
+        <Button
+          variant="outlined"
+          type="button"
+          onClick={handleBackToDashboard}
+        >
           Go Back to Dashboard
-        </button>
-        <button type="button" onClick={sendUpdatedPostToServer}>
+        </Button>
+        <Button
+          variant="outlined"
+          type="button"
+          onClick={sendUpdatedPostToServer}
+        >
           Update Post
-        </button>
+        </Button>
       </div>
-      <div className="newPostFormDiv">
-        <form className="newPostForm">
-          <div className="addPostTitleDiv">
-            <label htmlFor="title">Title: </label>
-            <input
-              id="title"
-              name="title"
-              value={locationName}
-              onChange={(event) => setLocationName(event.target.value)}
-              required
-            ></input>
-          </div>
-          <div className="newPostAddPhotoDiv">
-            <p>Please select an image:</p>
-            <input
-              type="file"
-              accept="image/*"
-              onChange={onFileChange}
-              className="headerImageInput"
-            ></input>
-          </div>
-          <div className="newPostCategoryDiv">
-            <label htmlFor="category">Category: </label>
-            <select
-              id="category"
-              name="category"
-              value={category}
-              onChange={(event) => setCategory(event.target.value)}
-              required
-            >
-              <option value="restaurant">Restaurant</option>
-              <option value="cafe">Cafe</option>
-              <option value="shopping">Shopping</option>
-              <option value="Explore">Explore</option>
-            </select>
-          </div>
-          <div className="newPostAddressDiv">
-            <label htmlFor="koreanAddress">Korean Address: </label>
-            <textarea
-              id="koreanAddress"
-              name="koreanAddress"
-              value={koreanAddress}
-              onChange={(event) => setKoreanAddress(event.target.value)}
-              required
-            ></textarea>
-            <label htmlFor="address">Address: </label>
-            <textarea
-              id="address"
-              name="address"
-              value={address}
-              onChange={(event) => setAddress(event.target.value)}
-              required
-            ></textarea>
-          </div>
-          <label htmlFor="content"></label>
-          <textarea
-            id="content"
-            name="content"
-            rows="8"
-            cols="205"
-            value={description}
-            onChange={(event) => setDescription(event.target.value)}
-            required
-          ></textarea>
-        </form>
+      {/* Div for the recommendation content */}
+      <div className="editPostEntireContentDiv">
+        <Paper elevation={10}>
+          <Card variant="outlined" sx={{ padding: '10px' }}>
+            <h1 className="newPostHeader">
+              Edit: {recommendation.location_name}
+            </h1>
+            <div className="newPostFormDiv">
+              <form className="editPostForm">
+                {/* Div for title and description */}
+                <div className="titleAndDescription">
+                  <div className="addPostTitleDiv">
+                    <label htmlFor="title">Title: </label>
+                    <textarea
+                      id="title"
+                      name="title"
+                      rows="1"
+                      cols="55"
+                      value={locationName}
+                      onChange={(event) => setLocationName(event.target.value)}
+                      required
+                    ></textarea>
+                  </div>
+                  <label htmlFor="content"></label>
+                  <textarea
+                    id="content"
+                    name="content"
+                    rows="8"
+                    cols="55"
+                    value={description}
+                    onChange={(event) => setDescription(event.target.value)}
+                    required
+                  ></textarea>
+                </div>
+                {/* Div for post details */}
+                <div className="editPostDetails">
+                  <div className="newPostAddPhotoDiv">
+                    <p>Please select an image:</p>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={onFileChange}
+                      className="headerImageInput"
+                    ></input>
+                  </div>
+                  <div className="newPostCategoryDiv">
+                    <label htmlFor="category">Category: </label>
+                    <select
+                      id="category"
+                      name="category"
+                      value={category}
+                      onChange={(event) => setCategory(event.target.value)}
+                      required
+                    >
+                      <option value="restaurant">Restaurant</option>
+                      <option value="cafe">Cafe</option>
+                      <option value="shopping">Shopping</option>
+                      <option value="Explore">Explore</option>
+                    </select>
+                  </div>
+                  <div className="newPostAddressDiv">
+                    <label htmlFor="koreanAddress">Korean Address: </label>
+                    <textarea
+                      id="koreanAddress"
+                      name="koreanAddress"
+                      value={koreanAddress}
+                      onChange={(event) => setKoreanAddress(event.target.value)}
+                      required
+                    ></textarea>
+                    <label htmlFor="address">Address: </label>
+                    <textarea
+                      id="address"
+                      name="address"
+                      value={address}
+                      onChange={(event) => setAddress(event.target.value)}
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </Card>
+        </Paper>
       </div>
     </div>
   );

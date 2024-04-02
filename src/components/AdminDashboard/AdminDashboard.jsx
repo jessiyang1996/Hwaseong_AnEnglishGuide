@@ -49,7 +49,7 @@ function AdminDashboard() {
   }, []); // end of useEffect
 
   return (
-    <div>
+    <div className="adminDashEntirecontainer">
       <div className="headerBox"></div>
       <div className="adminDashboardDiv">
         <h1 className="adminDashboardHeader">Admin Dashboard</h1>

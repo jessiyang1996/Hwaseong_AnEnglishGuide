@@ -3,3 +3,29 @@
   max-height: 250px;
   object-fit: cover;
 }
+
+.editPostTopNavigatorButtons {
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.editPostEntireContentDiv {
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.editPostTopNavigatorButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.editPostForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editPostDetails {
+  /* display: flex; */
+}
