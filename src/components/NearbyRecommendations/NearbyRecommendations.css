@@ -12,17 +12,17 @@
 .nearbyRecommendationsListContainer {
   display: flex;
   justify-items: center;
-  align-items: flex-end;
-  margin-left: 15%;
-  margin-right: 15%;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-bottom: 15px;
   margin-top: 10px;
   /* background-color: red; */
 }
 
 .nearbyRecommendationsHeaderImage {
-  width: 600px;
-  height: 400px;
+  width: 550px;
+  height: 350px;
   object-fit: cover;
 }
 
