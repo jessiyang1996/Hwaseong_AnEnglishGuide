@@ -30,6 +30,7 @@ function NearbyRecommendations() {
   return (
     <div>
       <div className="nearbyRecommendationsHeaderBoxContainer"></div>
+      <h1 className="nearybyRecommendationsTitle">Nearby Recommendations</h1>
       {/* map through the array of objects to display the list */}
       {recommendationsList.map((recommendation) => (
         <>

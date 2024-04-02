@@ -1,9 +1,10 @@
 // this component will be for the nearby recommendations list on the admin dashboard
-import './AdminDashboardRecommendationsItem.css';
 
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+
+import './AdminDashboardRecommendationsItem.css';
 
 function RecommendationsItem({ recommendation }) {
   const history = useHistory();

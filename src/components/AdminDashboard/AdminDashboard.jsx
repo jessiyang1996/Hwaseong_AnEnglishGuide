@@ -1,10 +1,15 @@
-import './AdminDashboard.css';
-import AdminDashboardRecommendationsItem from '../AdminDashboardRecommendationsItem/AdminDashboardRecommendationsItem';
-
+// Imports:
 import axios from 'axios'; // This is how we will make our server calls
 import { useSelector, useDispatch } from 'react-redux'; // This will allow us to access things in the store
 import { useEffect } from 'react'; // this will allow us to load things on initial page load
 import { useHistory } from 'react-router-dom';
+
+//Material UI imports
+import Card from '@mui/material/Card';
+import Paper from '@mui/material/Paper';
+
+import './AdminDashboard.css';
+import AdminDashboardRecommendationsItem from '../AdminDashboardRecommendationsItem/AdminDashboardRecommendationsItem';
 
 function AdminDashboard() {
   const recommendationsList = useSelector((store) => store.recommendationsList);
@@ -69,16 +74,20 @@ function AdminDashboard() {
         {/* div for the post container */}
         <div className="postContainer"></div>
         <div className="adminDashListContainer">
-          <ul>
-            {/* .map will go here showing: title --> edit button -->delete button */}
-            {recommendationsList.map((recommendation) => (
-              // recommendations item
-              <AdminDashboardRecommendationsItem
-                key={recommendationsList.id}
-                recommendation={recommendation}
-              ></AdminDashboardRecommendationsItem>
-            ))}
-          </ul>
+          <Paper elevation={10}>
+            <Card variant="outlined">
+              <ul>
+                {/* .map will go here showing: title --> edit button -->delete button */}
+                {recommendationsList.map((recommendation) => (
+                  // recommendations item
+                  <AdminDashboardRecommendationsItem
+                    key={recommendationsList.id}
+                    recommendation={recommendation}
+                  ></AdminDashboardRecommendationsItem>
+                ))}
+              </ul>
+            </Card>
+          </Paper>
         </div>
       </div>
     </div>
