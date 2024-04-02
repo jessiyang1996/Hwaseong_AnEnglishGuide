@@ -2,6 +2,8 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
 import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import Paper from '@mui/material/Paper';
 
 import './AddNewPost.css';
 import AddNewPostForm from '../AddNewPostForm/AddNewPostForm';
@@ -74,9 +76,13 @@ function AddNewPost() {
             Publish
           </Button>
         </div>
-        <div className="newPostFormDiv">
-          <AddNewPostForm />
-        </div>
+        <Paper elevation={12}>
+          <Card variant="outlined">
+            <div className="newPostFormDiv">
+              <AddNewPostForm />
+            </div>
+          </Card>
+        </Paper>
       </div>
     </>
   );

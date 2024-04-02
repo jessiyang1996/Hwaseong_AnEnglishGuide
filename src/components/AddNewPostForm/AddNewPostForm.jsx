@@ -54,6 +54,7 @@ function AddNewPostForm() {
             id="title"
             name="title"
             required
+            placeholder="Location Name"
             onChange={(event) => setTitle(event.target.value)}
           ></input>
         </div>
@@ -101,7 +102,7 @@ function AddNewPostForm() {
           id="content"
           name="content"
           rows="8"
-          cols="205"
+          cols="100"
           required
           onChange={(event) => setDescription(event.target.value)}
         ></textarea>
