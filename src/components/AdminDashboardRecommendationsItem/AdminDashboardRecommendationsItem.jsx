@@ -4,6 +4,8 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
+import Button from '@mui/material/Button';
+
 import './AdminDashboardRecommendationsItem.css';
 
 function RecommendationsItem({ recommendation }) {
@@ -49,23 +51,26 @@ function RecommendationsItem({ recommendation }) {
     <div className="recommendationsItemDiv">
       <div className="recommendationsItemContainer">
         <div className="adminDashRecommendationItemName">
-          {recommendation.location_name}
+          <p>{recommendation.location_name}</p>
         </div>
         <div className="editDeleteButtons">
-          <button
+          <Button
+            variant="outlined"
             type="button"
             onClick={handleEditButton}
             className="adminEditButton"
           >
             Edit
-          </button>
-          <button
+          </Button>
+          <Button
+            variant="outlined"
             type="button"
             onClick={handleDeleteButton}
             className="adminDeleteButton"
+            sx={{ marginLeft: '5px' }}
           >
             Delete
-          </button>
+          </Button>
         </div>
       </div>
     </div>

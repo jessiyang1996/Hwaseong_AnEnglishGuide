@@ -15,3 +15,11 @@
 .editDeleteButtons {
   margin-bottom: 5px;
 }
+
+.adminDashRecommendationItemName {
+  font-size: large;
+}
+
+.adminDeleteButton {
+  margin-left: 4px;
+}
