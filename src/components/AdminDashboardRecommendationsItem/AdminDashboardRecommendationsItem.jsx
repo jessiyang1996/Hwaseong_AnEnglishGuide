@@ -47,29 +47,27 @@ function RecommendationsItem({ recommendation }) {
 
   return (
     <div className="recommendationsItemDiv">
-      <ul>
-        <li>
-          <div className="recommendationsItemContainer">
-            {recommendation.location_name}
-            <div className="editDeleteButtons">
-              <button
-                type="button"
-                onClick={handleEditButton}
-                className="adminEditButton"
-              >
-                Edit
-              </button>
-              <button
-                type="button"
-                onClick={handleDeleteButton}
-                className="adminDeleteButton"
-              >
-                Delete
-              </button>
-            </div>
-          </div>
-        </li>
-      </ul>
+      <div className="recommendationsItemContainer">
+        <div className="adminDashRecommendationItemName">
+          {recommendation.location_name}
+        </div>
+        <div className="editDeleteButtons">
+          <button
+            type="button"
+            onClick={handleEditButton}
+            className="adminEditButton"
+          >
+            Edit
+          </button>
+          <button
+            type="button"
+            onClick={handleDeleteButton}
+            className="adminDeleteButton"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

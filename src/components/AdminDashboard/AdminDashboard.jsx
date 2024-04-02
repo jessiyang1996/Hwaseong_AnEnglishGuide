@@ -73,7 +73,7 @@ function AdminDashboard() {
         </div>
         {/* div for the post container */}
         <Paper elevation={10}>
-          <Card variant="outlined" sx={{ padding: '15px' }}>
+          <Card variant="outlined" sx={{ padding: '10px' }}>
             <div className="postContainer"></div>
             <div className="adminDashListContainer">
               <ul>
