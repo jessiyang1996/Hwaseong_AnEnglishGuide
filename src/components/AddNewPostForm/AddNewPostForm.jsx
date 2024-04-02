@@ -48,64 +48,73 @@ function AddNewPostForm() {
   return (
     <>
       <form className="newPostForm">
-        <div className="addPostTitleDiv">
-          <label htmlFor="title">Title: </label>
-          <input
-            id="title"
-            name="title"
-            required
-            placeholder="Location Name"
-            onChange={(event) => setTitle(event.target.value)}
-          ></input>
-        </div>
-        <div className="newPostAddPhotoDiv">
-          <p>Please select an image:</p>
-          <input
-            type="file"
-            accept="image/*"
-            onChange={onFileChange}
-            className="headerImageInput"
-          ></input>
-        </div>
-        <div className="newPostCategoryDiv">
-          <label htmlFor="category">Category: </label>
-          <select
-            id="category"
-            name="category"
-            required
-            onChange={(event) => setCategory(event.target.value)}
-          >
-            <option value="restaurant">Restaurant</option>
-            <option value="cafe">Cafe</option>
-            <option value="shopping">Shopping</option>
-            <option value="Explore">Explore</option>
-          </select>
-        </div>
-        <div className="newPostAddressDiv">
-          <label htmlFor="koreanAddress">Korean Address: </label>
+        {/* Div for title and description of location */}
+        <div className="titleAndDescription">
+          <div className="addPostTitleDiv">
+            <label htmlFor="title">Title: </label>
+            <textarea
+              id="title"
+              name="title"
+              rows="1"
+              cols="73"
+              required
+              placeholder="Location Name"
+              onChange={(event) => setTitle(event.target.value)}
+            ></textarea>
+          </div>
+          <label htmlFor="content"></label>
           <textarea
-            id="koreanAddress"
-            name="koreanAddress"
+            id="content"
+            name="content"
+            rows="15"
+            cols="73"
+            placeholder="Location Description"
             required
-            onChange={(event) => setKoreanAddress(event.target.value)}
-          ></textarea>
-          <label htmlFor="address">Address: </label>
-          <textarea
-            id="address"
-            name="address"
-            required
-            onChange={(event) => setAddress(event.target.value)}
+            onChange={(event) => setDescription(event.target.value)}
           ></textarea>
         </div>
-        <label htmlFor="content"></label>
-        <textarea
-          id="content"
-          name="content"
-          rows="8"
-          cols="50"
-          required
-          onChange={(event) => setDescription(event.target.value)}
-        ></textarea>
+        {/* Div for post details */}
+        <div className="postDetails">
+          <div className="newPostAddPhotoDiv">
+            <p>Please select an image:</p>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={onFileChange}
+              className="headerImageInput"
+            ></input>
+          </div>
+          <div className="newPostCategoryDiv">
+            <label htmlFor="category">Category: </label>
+            <select
+              id="category"
+              name="category"
+              required
+              onChange={(event) => setCategory(event.target.value)}
+            >
+              <option value="restaurant">Restaurant</option>
+              <option value="cafe">Cafe</option>
+              <option value="shopping">Shopping</option>
+              <option value="Explore">Explore</option>
+            </select>
+          </div>
+          <div className="newPostAddressDiv">
+            <label htmlFor="koreanAddress">Korean Address: </label>
+            <textarea
+              id="koreanAddress"
+              name="koreanAddress"
+              required
+              onChange={(event) => setKoreanAddress(event.target.value)}
+            ></textarea>
+            <label htmlFor="address">English Address: </label>
+            <textarea
+              id="address"
+              name="address"
+              required
+              onChange={(event) => setAddress(event.target.value)}
+            ></textarea>
+          </div>
+        </div>
       </form>
     </>
   );

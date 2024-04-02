@@ -1,7 +1,26 @@
 .newPostForm {
   text-align: center;
+  display: flex;
+  align-items: first baseline;
+  justify-content: space-between;
 }
 
 .newPostCategoryDiv {
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.titleAndDescription {
+  /* background-color: blue; */
+  width: 70%;
+}
+
+.postDetails {
+  max-width: 25%;
+  /* background-color: pink; */
+}
+
+.newPostAddressDiv {
+  display: flex;
+  flex-direction: column;
 }
