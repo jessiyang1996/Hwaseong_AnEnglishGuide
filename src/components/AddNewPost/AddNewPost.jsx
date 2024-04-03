@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -14,12 +14,17 @@ function AddNewPost() {
   const history = useHistory();
   // let [imagePath, setImagePath] = useState('');
   let imagePath = useSelector((store) => store.imagePathReducer);
+  let dispatch = useDispatch();
 
   function handleBackToDashboard(event) {
     event.preventDefault();
     // console.log('in handleBackToDashboard()');
     history.push('/admin-dashboard');
   }
+
+  const fetchRecommendationsList = () => {
+    dispatch({ type: 'FETCH_RECOMMENDATIONS_LIST' });
+  };
 
   //FUNCTION TO SEND NEW POST TO SERVER
   function sendNewPostToServer(event) {
@@ -61,9 +66,6 @@ function AddNewPost() {
       });
   }
 
-  const fetchRecommendationsList = () => {
-    dispatch({ type: 'FETCH_RECOMMENDATIONS_LIST' });
-  };
   return (
     <>
       <div className="newPostHeaderDiv"></div>
