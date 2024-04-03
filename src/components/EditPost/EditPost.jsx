@@ -36,18 +36,18 @@ function EditPost() {
 
     // Check if the file is one of the allowed types:
     if (acceptedImageTypes.includes(fileToUpload.type)) {
-      console.log('in accepted if');
-      console.log('fileToUpload', fileToUpload);
+      // console.log('in accepted if');
+      // console.log('fileToUpload', fileToUpload);
       const formData = new FormData();
       formData.append('file', fileToUpload);
-      console.log('process.env: ', import.meta.env.VITE_CLOUD_NAME);
-      console.log('import.meta.env.VITE_PRESET: ', import.meta.env.VITE_PRESET);
+      // console.log('process.env: ', import.meta.env.VITE_CLOUD_NAME);
+      // console.log('import.meta.env.VITE_PRESET: ', import.meta.env.VITE_PRESET);
       formData.append('upload_preset', import.meta.env.VITE_PRESET);
       let postUrl = `https://api.cloudinary.com/v1_1/${
         import.meta.env.VITE_CLOUD_NAME
       }/image/upload`;
-      console.log('formData: ', formData.get('file'));
-      console.log('upload_preset: ', formData.get('upload_preset'));
+      // console.log('formData: ', formData.get('file'));
+      // console.log('upload_preset: ', formData.get('upload_preset'));
       axios
         .post(postUrl, formData)
         .then((response) => {
