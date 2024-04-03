@@ -43,8 +43,15 @@ function NearbyRecommendations() {
               <div className="nearyByRecommendationsDetailContainer">
                 <h3>{recommendation.location_name}</h3>
                 <div className="NearbyRecommendationsAddressesDiv">
-                  Korean Address: <p>{recommendation.korean_address}</p>
-                  English Address: <p>{recommendation.address}</p>
+                  <div className="nearbyRecommendationsKoreanAddressDiv">
+                    <p className="boldText">Korean Address:</p>
+                    <p>{recommendation.korean_address}</p>
+                  </div>
+                  <div className="nearbyRecommendationsEnglishAddressDiv">
+                    <p className="boldText">English Address:</p>
+                    <p>{recommendation.address}</p>
+                  </div>
+                  <p className="boldText">Description:</p>
                   <p>{recommendation.description}</p>
                 </div>
               </div>

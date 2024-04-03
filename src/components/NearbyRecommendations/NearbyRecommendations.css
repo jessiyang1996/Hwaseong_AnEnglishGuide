@@ -1,3 +1,10 @@
+/* font styling: */
+.boldText {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* body styling */
 .nearbyRecommendationsHeaderBoxContainer {
   width: 100%;
   height: 120px;
@@ -29,4 +36,12 @@
 .nearyByRecommendationsDetailContainer {
   width: 50%;
   margin-left: 20px;
+}
+
+.nearbyRecommendationsKoreanAddressDiv {
+  display: flex;
+}
+
+.nearbyRecommendationsEnglishAddressDiv {
+  display: flex;
 }
