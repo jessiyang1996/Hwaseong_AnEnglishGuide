@@ -1,8 +1,10 @@
-import './RegisterPage.css';
-
 import { useHistory } from 'react-router-dom';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
+import Button from '@mui/material/Button';
+
+import './RegisterPage.css';
 
 function RegisterPage() {
   const history = useHistory();
@@ -73,7 +75,9 @@ function RegisterPage() {
         {/* End of register form */}
         {/* Login Button */}
         <center>
-          <button
+          <Button
+            variant="text"
+            sx={{ color: 'black' }}
             type="button"
             className="loginButton"
             onClick={() => {
@@ -81,7 +85,7 @@ function RegisterPage() {
             }}
           >
             Login
-          </button>
+          </Button>
         </center>
         {/* End of Login Button */}
       </div>

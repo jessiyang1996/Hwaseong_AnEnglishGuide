@@ -24,6 +24,16 @@ function Seoshin() {
             port, or enjoy some quality time with their family members.
           </p>
         </div>
+        <div className="Jebu Island">
+          <h3>Jebu Island (제부도)</h3>
+          <p>
+            Jebu Island is a unique island. There is a road that connects the
+            island to mainland Hwaseong. However, this road only appears twice a
+            day. During high tides, the road disappears under the water.
+            Recently, a cable car ride was built so that people can easily
+            access Jebu-do.
+          </p>
+        </div>
         <div className="jeongokhangDiv">
           <h3>Jeongok Port</h3>
           <p>
