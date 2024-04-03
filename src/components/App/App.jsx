@@ -23,6 +23,7 @@ import ExploreHwaseong from '../ExploreHwaseong/ExploreHwaseong';
 import AdminDashboard from '../AdminDashboard/AdminDashboard';
 import AddNewPost from '../AddNewPost/AddNewPost';
 import NearbyRecommendations from '../NearbyRecommendations/NearbyRecommendations';
+import Seoshin from '../Seoshin/Seoshin.jsx';
 
 import EditPost from '../EditPost/EditPost';
 
@@ -71,6 +72,9 @@ function App() {
           </Route>
           <Route path="/nearby-recommendations">
             <NearbyRecommendations />
+          </Route>
+          <Route path="/Seoshin-myeon">
+            <Seoshin />
           </Route>
 
           {/* For protected routes, the view could show one of several things on the same route.
