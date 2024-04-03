@@ -14,6 +14,8 @@ function EditPost() {
   const recommendationsList = useSelector((store) => store.recommendationsList);
   const history = useHistory();
 
+  let [imagePath, setImagePath] = useState('');
+
   function handleBackToDashboard(event) {
     event.preventDefault();
     // console.log('in handleBackToDashboard()');
@@ -22,6 +24,7 @@ function EditPost() {
 
   const onFileChange = async (event) => {
     //access the selected file
+    console.log('in onFileChange()');
     const fileToUpload = event.target.files[0];
     // Limit user to specific file types
     const acceptedImageTypes = [
@@ -33,20 +36,27 @@ function EditPost() {
 
     // Check if the file is one of the allowed types:
     if (acceptedImageTypes.includes(fileToUpload.type)) {
+      console.log('in accepted if');
+      console.log('fileToUpload', fileToUpload);
       const formData = new FormData();
       formData.append('file', fileToUpload);
-      console.log('process.env: ', process.env.REACT_APP_CLOUD_NAME);
-      formData.append('upload_preset', process.env.REACT_APP_PRESET);
-      let postUrl = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_NAME}/image/upload`;
+      console.log('process.env: ', import.meta.env.VITE_CLOUD_NAME);
+      console.log('import.meta.env.VITE_PRESET: ', import.meta.env.VITE_PRESET);
+      formData.append('upload_preset', import.meta.env.VITE_PRESET);
+      let postUrl = `https://api.cloudinary.com/v1_1/${
+        import.meta.env.VITE_CLOUD_NAME
+      }/image/upload`;
+      console.log('formData: ', formData.get('file'));
+      console.log('upload_preset: ', formData.get('upload_preset'));
       axios
         .post(postUrl, formData)
         .then((response) => {
           console.log('Success!', response);
-          setImage(response.data.url);
+          setImagePath(response.data.url);
         })
         .catch((error) => {
           console.log('error', error);
-          alert('Something went wrong');
+          alert('Something went wrong with uploading to cloudinary');
         });
     } else {
       alert('Please select an image');
@@ -63,9 +73,7 @@ function EditPost() {
     let location_address = document.querySelector('#address').value;
     let location_category = document.querySelector('#category').value;
     let location_content = document.querySelector('#content').value;
-    let location_headerImage =
-      document.querySelector('.headerImageInput').value;
-
+    let location_headerImage = imagePath;
     // console.log('location_title', location_title);
     // console.log('location_koreanAddress', location_koreanAddress);
     // console.log('location_address', location_address);
@@ -83,6 +91,7 @@ function EditPost() {
       })
       .then((response) => {
         console.log('POST was successful!');
+        console.log('imagePath: ', imagePath);
         alert('Success! The post was edited.');
       })
       .catch((error) => {

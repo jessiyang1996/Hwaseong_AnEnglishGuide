@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
+import { useState } from 'react';
 
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -10,6 +11,7 @@ import AddNewPostForm from '../AddNewPostForm/AddNewPostForm';
 
 function AddNewPost() {
   const history = useHistory();
+  let [imagePath, setImagePath] = useState('');
 
   function handleBackToDashboard(event) {
     event.preventDefault();
@@ -27,8 +29,7 @@ function AddNewPost() {
     let location_address = document.querySelector('#address').value;
     let location_category = document.querySelector('#category').value;
     let location_content = document.querySelector('#content').value;
-    let location_headerImage =
-      document.querySelector('.headerImageInput').value;
+    let location_headerImage = imagePath; // imagePath is the path from the image upload
 
     // console.log('location_title', location_title);
     // console.log('location_koreanAddress', location_koreanAddress);
@@ -47,14 +48,20 @@ function AddNewPost() {
       })
       .then((response) => {
         console.log('POST was successful!');
-        alert('Success! The new post was added.');
+        alert('Success! The new post was added to the database.');
+        fetchRecommendationsList();
       })
       .catch((error) => {
-        console.log('Error in POST route: ', error);
-        alert('Post was unsuccessful! Please try again');
+        console.log('Error in POST axios api call: ', error);
+        alert(
+          'Post was unsuccessful from AddNewPost to the database! Please try again'
+        );
       });
   }
 
+  const fetchRecommendationsList = () => {
+    dispatch({ type: 'FETCH_RECOMMENDATIONS_LIST' });
+  };
   return (
     <>
       <div className="newPostHeaderDiv"></div>

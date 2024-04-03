@@ -4,7 +4,7 @@ import axios from 'axios';
 import './AddNewPostForm.css';
 
 function AddNewPostForm() {
-  // let [imageList, setImageList] = useState([]);
+  let [description, setDescription] = useState('');
 
   const [title, setTitle] = useState('');
   const [image, setImage] = useState('');
@@ -27,23 +27,40 @@ function AddNewPostForm() {
     if (acceptedImageTypes.includes(fileToUpload.type)) {
       const formData = new FormData();
       formData.append('file', fileToUpload);
-      console.log('process.env: ', process.env.REACT_APP_CLOUD_NAME);
-      formData.append('upload_preset', process.env.REACT_APP_PRESET);
-      let postUrl = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_NAME}/image/upload`;
+      // console.log('process.env: ', process.env.REACT_APP_CLOUD_NAME);
+      formData.append('upload_preset', import.meta.env.VITE_PRESET);
+      let postUrl = `https://api.cloudinary.com/v1_1/${
+        import.meta.env.VITE_CLOUD_NAME
+      }/image/upload`;
       axios
         .post(postUrl, formData)
         .then((response) => {
           console.log('Success!', response);
+          //image now stores the link that we want
           setImage(response.data.url);
         })
         .catch((error) => {
-          console.log('error', error);
-          alert('Something went wrong');
+          console.log('error in posting to cloudinary: ', error);
+          alert('Something went wrong when posting to cloudinary');
         });
     } else {
       alert('Please select an image');
     }
   };
+
+  // const sendPhotoToServer = (event) => {
+  //   event.preventDefault();
+  //   // Send image path to YOUR server
+  //   axios
+  //     .post('/photos', { path: imagePath })
+  //     .then((response) => {
+  //       getImageList();
+  //     })
+  //     .catch((error) => {
+  //       console.error(error);
+  //       alert('Something went wrong!');
+  //     });
+  // };
 
   return (
     <>

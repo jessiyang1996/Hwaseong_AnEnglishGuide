@@ -100,7 +100,10 @@ function AboutPage() {
               <h3>Snapshots of Hwaseong</h3>
             </div>
             <div className="aboutPhotoGallery">
-              <img src="" className="aboutPhotoGalleryItem"></img>
+              <img
+                src="images/tando-jeongok.jpeg"
+                className="aboutPhotoGalleryItem"
+              ></img>
               <img src="" className="aboutPhotoGalleryItem"></img>
               <img src="" className="aboutPhotoGalleryItem"></img>
             </div>

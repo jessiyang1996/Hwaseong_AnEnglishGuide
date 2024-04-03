@@ -14,7 +14,7 @@ CREATE TABLE "nearby_recommendations" (
 	"address" VARCHAR (1000) NOT NULL,
 	"category" VARCHAR(500) NOT NULL,
 	"description" TEXT NOT NULL,
-	"header_image" TEXT NOT NULL
+	"header_image" TEXT 
 );
 
 -- Table for photos

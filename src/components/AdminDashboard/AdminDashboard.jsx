@@ -85,7 +85,7 @@ function AdminDashboard() {
                 {recommendationsList.map((recommendation) => (
                   // recommendations item
                   <AdminDashboardRecommendationsItem
-                    key={recommendationsList.id}
+                    key={recommendation.id}
                     recommendation={recommendation}
                   ></AdminDashboardRecommendationsItem>
                 ))}

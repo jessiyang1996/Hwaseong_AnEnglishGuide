@@ -15,7 +15,7 @@ function NearbyRecommendations() {
 
   //on initial load
   useEffect(() => {
-    getElements();
+    fetchRecommendationsList();
   }, []); // end of useEffect
 
   console.log(
@@ -23,7 +23,7 @@ function NearbyRecommendations() {
     recommendationsList
   );
 
-  const getElements = () => {
+  const fetchRecommendationsList = () => {
     dispatch({ type: 'FETCH_RECOMMENDATIONS_LIST' });
   };
 
@@ -33,7 +33,7 @@ function NearbyRecommendations() {
       <h1 className="nearybyRecommendationsTitle">Nearby Recommendations</h1>
       {/* map through the array of objects to display the list */}
       {recommendationsList.map((recommendation) => (
-        <>
+        <div key={recommendation.id}>
           <Card variant="outlined">
             <div className="nearbyRecommendationsListContainer">
               <img
@@ -50,7 +50,7 @@ function NearbyRecommendations() {
               </div>
             </div>
           </Card>
-        </>
+        </div>
       ))}
     </div>
   );

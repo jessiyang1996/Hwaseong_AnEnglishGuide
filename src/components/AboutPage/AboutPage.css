@@ -73,10 +73,11 @@
 }
 
 .aboutPhotoGalleryItem {
-  width: 200px;
+  width: 350px;
   background-color: black;
-  height: 200px;
+  height: 250px;
   margin: 10px;
+  object-fit: cover;
 }
 /* Text styling */
 
