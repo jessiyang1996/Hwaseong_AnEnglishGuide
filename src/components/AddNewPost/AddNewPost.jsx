@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -11,7 +12,8 @@ import AddNewPostForm from '../AddNewPostForm/AddNewPostForm';
 
 function AddNewPost() {
   const history = useHistory();
-  let [imagePath, setImagePath] = useState('');
+  // let [imagePath, setImagePath] = useState('');
+  let imagePath = useSelector((store) => store.imagePathReducer);
 
   function handleBackToDashboard(event) {
     event.preventDefault();

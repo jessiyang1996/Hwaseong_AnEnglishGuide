@@ -1,16 +1,20 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useSelector, useDispatch } from 'react-redux';
 
 import './AddNewPostForm.css';
 
 function AddNewPostForm() {
   let [description, setDescription] = useState('');
-
   const [title, setTitle] = useState('');
   const [image, setImage] = useState('');
   const [category, setCategory] = useState('');
   const [koreanAddress, setKoreanAddress] = useState('');
   const [address, setAddress] = useState('');
+
+  // let [imagePath, setImagePath] = useState('');
+  let imagePath = useSelector((store) => store.imagePathReducer);
+  let dispatch = useDispatch();
 
   const onFileChange = async (event) => {
     //access the selected file
@@ -37,7 +41,9 @@ function AddNewPostForm() {
         .then((response) => {
           console.log('Success!', response);
           //image now stores the link that we want
-          setImage(response.data.url);
+          // setImagePath(response.data.url);
+          dispatch({ type: 'SET_IMAGE_PATH', payload: response.data.url });
+          console.log(imagePath);
         })
         .catch((error) => {
           console.log('error in posting to cloudinary: ', error);
