@@ -64,9 +64,9 @@ function Nav() {
           </>
         )}
         {/* DROPDOWN MENU */}
-        <div className="dropdownDiv">
+        <div>
           {showDropdown && (
-            <div className="dropDownItemsDiv">
+            <div className="dropdownDiv">
               <Link to="/admin-dashboard" className="dropdownItem">
                 Dashboard
               </Link>

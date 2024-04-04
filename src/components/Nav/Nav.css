@@ -35,9 +35,13 @@
   position: absolute;
   top: 75%;
   right: 25px;
+  /* This is giving us a white box; need to remove */
   background-color: rgb(255, 255, 255);
   padding: 10px;
   text-align: right;
+}
+
+.dropdownItem {
 }
 
 .dropdownItem {
