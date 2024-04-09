@@ -1,0 +1,19 @@
+.exploreHwaseongTopPadding {
+  width: 100%;
+  height: 120px;
+  background-color: black;
+  margin-bottom: 25px;
+}
+
+.imageMapAndDetailsContainer {
+  display: flex;
+}
+
+.imageMapContainer {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.imageMapSeoshinMyeon {
+  cursor: pointer;
+}
