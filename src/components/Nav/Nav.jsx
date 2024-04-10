@@ -32,9 +32,9 @@ function Nav() {
               ABOUT
             </Link>
 
-            <Link to="/explore-hwaseong" className="navLink">
+            {/* <Link to="/explore-hwaseong" className="navLink">
               EXPLORE HWASEONG
-            </Link>
+            </Link> */}
 
             <Link to="/nearby-recommendations" className="navLink">
               NEARBY RECOMMENDATIONS

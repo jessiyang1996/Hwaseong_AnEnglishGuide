@@ -31,12 +31,13 @@ function LandingPageOfficial() {
           {/* div for the text in descriptionDiv */}
           <div className="sectionDescriptionDiv">
             <p>
-              Enjoy the rich culture of South Korea in Hwaseong City. Spend the
-              day at a rural fishing village exploring the ports and watching
-              the sunset at the sea or explore the modern conveniences in a
-              larger town. From looking at dinosaur eggs, exploring a fortress
-              from the Baekje Dynasty, to venturing around a new and upcoming
-              metropolitan. There's many things to see and do in Hwaseong City.
+              Experience the rich culture of South Korea in Hwaseong City. Spend
+              the day exploring a rural fishing village where you can wander the
+              ports and watch the sunset by the sea. Or, explore the modern
+              conveniences in a larger town. From looking at fossilized dinosaur
+              eggs to exploring a fortress from the Baekje Dynasty to venturing
+              around a new and upcoming metropolitan area, there are many things
+              to see and do in Hwaseong City.
             </p>
           </div>
         </div>

@@ -40,46 +40,15 @@ li {
   /* background-color: blue; */
 }
 
-.sloganContainers {
-  color: black;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  width: 100%;
-  margin-top: 0;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.shorterBodyDiv {
-  width: 89%;
-  background-color: rgba(128, 128, 0, 0.253);
-  height: 200px;
-  margin-top: 0;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.titleSubtitle {
-  position: absolute;
-  font-size: 30px;
-  top: 42%;
-  left: 48%;
-  color: white;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
 /* div for the Explore Hwaseong title and short description */
 .descriptionDiv {
   display: flex;
   position: absolute;
   top: 20em;
   flex-direction: column;
-  align-items: center;
-  justify-content: left;
+  align-items: flex-end;
+  justify-content: flex-end;
+  /* background-color: pink; */
   margin-right: 150px;
   margin-left: 150px;
   height: 300px;
@@ -88,9 +57,13 @@ li {
   width: 50%;
 }
 
+.landingPageTitleText {
+  letter-spacing: 0.2em;
+  /* font-family: 'Amstelvar'; */
+}
+
 .sectionDescriptionDiv {
   width: 50%;
-  text-align: left;
 }
 
 /* div for the photos and descriptions of some things to do in Hwaseong */
