@@ -30,7 +30,7 @@ function LandingPageOfficial() {
           </div>
           {/* div for the text in descriptionDiv */}
           <div className="sectionDescriptionDiv">
-            <p>
+            <p className="landingPageDescriptionText">
               Experience the rich culture of South Korea in Hwaseong City. Spend
               the day exploring a rural fishing village where you can wander the
               ports and watch the sunset by the sea. Or, explore the modern
