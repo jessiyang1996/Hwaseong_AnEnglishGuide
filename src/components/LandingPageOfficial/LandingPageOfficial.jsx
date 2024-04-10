@@ -42,11 +42,11 @@ function LandingPageOfficial() {
           </div>
         </div>
         {/* div for the photos and descriptions */}
-        <div className="landingPhotos">
+        {/* <div className="landingPhotos">
           <img className="landingImage" src="/images/tando_jeongok.jpeg" />
           <img className="landingImage" src="/images/tando_jeongok.jpeg" />
           <img className="landingImage" src="/images/tando_jeongok.jpeg" />
-        </div>
+        </div> */}
       </div>
     </div>
   );
