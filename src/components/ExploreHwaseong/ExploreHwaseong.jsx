@@ -1,5 +1,5 @@
 import './ExploreHwaseong.css';
-import hwaseongImageMapData from '../ExploreHwaseongDetails/ExploreHwaseongDetails';
+import hwaseongImageMapData from '../ExploreHwaseongData/ExploreHwaseongData';
 
 function ExploreHwaseong() {
   function showSeoshinData() {

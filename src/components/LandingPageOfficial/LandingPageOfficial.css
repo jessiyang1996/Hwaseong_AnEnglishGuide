@@ -35,7 +35,11 @@ li {
 }
 
 /* Description */
-.sectionHeaderDiv,
+.sectionHeaderDiv {
+  width: 30%;
+  /* background-color: blue; */
+}
+
 .sloganContainers {
   color: black;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -68,49 +72,48 @@ li {
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* div for the Explore Hwaseong title and short description */
 .descriptionDiv {
   display: flex;
+  position: absolute;
+  top: 20em;
   flex-direction: column;
-  text-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   margin-right: 150px;
   margin-left: 150px;
+  height: 300px;
+}
+.sectionHeaderDiv {
+  width: 50%;
 }
 
-.landingSection1 {
+.sectionDescriptionDiv {
+  width: 50%;
+  text-align: left;
+}
+
+/* div for the photos and descriptions of some things to do in Hwaseong */
+.landingPhotos {
+  max-width: 100%;
+  height: auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: orange;
+  object-fit: cover;
+  margin-left: 150px;
+  margin-right: 150px;
+  justify-content: space-between;
+  margin-bottom: 200px;
 }
 
-.dangseongFortressImage {
-  width: 50%;
+.landingImage {
+  width: 500px;
+  height: 300px;
 }
 
-.landingSection2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: orange;
-}
-
-.cableCarImage {
-  width: 50%;
-}
-
-.landingSection3 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: orange;
-}
-
-.sunsetImage {
-  width: 50%;
-}
-
-.landingDescriptionText {
-  width: 50%;
-}
+/* .whiteImageMap {
+  position: absolute;
+  top: 9em;
+  right: 3em;
+  width: 30%;
+  opacity: 0.4;
+} */

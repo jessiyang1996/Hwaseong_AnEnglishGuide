@@ -65,15 +65,15 @@ function AboutPage() {
                   <span className="blue">[3]</span> That is why many Korean
                   people are confused about Hwaseong. It also doesn't help that
                   Hwaseong City was named after the UNESCO site, Hwaseong
-                  Fortress, which is
+                  Fortress,
                 </p>
               </div>
             </div>
             <p>
-              located in Suwon City. For older people, they may still consider
-              Hwaseong as part of Suwon. For younger people, they may only know
-              of the famous UNESCO site. Either ways, Hwaseong and Suwon has a
-              complex, intertwined, and long relationship.
+              which is located in Suwon City. For older people, they may still
+              consider Hwaseong as part of Suwon. For younger people, they may
+              only know of the famous UNESCO site. Either ways, Hwaseong and
+              Suwon has a complex, intertwined, and long relationship.
             </p>
             <h3>Hwaseong Today</h3>
             <div>
@@ -101,11 +101,17 @@ function AboutPage() {
             </div>
             <div className="aboutPhotoGallery">
               <img
-                src="images/tando-jeongok.jpeg"
+                src="images/tando_jeongok.jpeg"
                 className="aboutPhotoGalleryItem"
               ></img>
-              <img src="" className="aboutPhotoGalleryItem"></img>
-              <img src="" className="aboutPhotoGalleryItem"></img>
+              <img
+                src="images/Jeongok_1.jpg"
+                className="aboutPhotoGalleryItem2"
+              ></img>
+              <img
+                src="images/namyang.jpg"
+                className="aboutPhotoGalleryItem"
+              ></img>
             </div>
             {/* end of photo gallery */}
           </div>

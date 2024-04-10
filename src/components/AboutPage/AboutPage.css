@@ -79,6 +79,15 @@
   margin: 10px;
   object-fit: cover;
 }
+
+.aboutPhotoGalleryItem2 {
+  width: 350px;
+  background-color: black;
+  height: 250px;
+  margin: 10px;
+  object-fit: cover;
+  object-position: 0 70%;
+}
 /* Text styling */
 
 /* resources: */

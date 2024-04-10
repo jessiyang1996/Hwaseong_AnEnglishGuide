@@ -16,54 +16,36 @@ function LandingPageOfficial() {
         <div className="navigationBarContainer">
           <Nav />
         </div>
+
+        {/* <div>
+          <img
+            className="whiteImageMap"
+            src="/images/ImageMapWhiteVersion.png"
+          />
+        </div> */}
+
         <div className="descriptionDiv">
           <div className="sectionHeaderDiv">
             <h2 className="landingPageTitleText">Explore Hwaseong City. </h2>
           </div>
-
-          {/* <div className="sloganContainer">
-            <div className="sloganItemDiv">
-              <p>Experience life on the ports of Korea.</p>
-              <img src=""></img>
-            </div>
-            <div className="sloganItemDiv">
-              <img></img>
-              <p>Enjoy the flavors of the sea.</p>
-            </div>
-            <p className="descriptionDivDescription">
-              Learn about the history of Hwaseong. Watch the sunset. Explore a
-              new town. Catch crabs on the mudflats. Ride a cable car over the
-              sea. There's many things to see and do in Hwaseong.
+          {/* div for the text in descriptionDiv */}
+          <div className="sectionDescriptionDiv">
+            <p>
+              Enjoy the rich culture of South Korea in Hwaseong City. Spend the
+              day at a rural fishing village exploring the ports and watching
+              the sunset at the sea or explore the modern conveniences in a
+              larger town. From looking at dinosaur eggs, exploring a fortress
+              from the Baekje Dynasty, to venturing around a new and upcoming
+              metropolitan. There's many things to see and do in Hwaseong City.
             </p>
-          </div> */}
-
-          <div className="landingSection1">
-            <div className="landingDescriptionText">
-              <p>Take a hike along mountains and visit Dang Seong Fortress</p>
-            </div>
-            <img
-              src="images/DangseongFortress.jpg"
-              className="dangseongFortressImage"
-            />
-          </div>
-
-          <div className="landingSection2">
-            <img src="images/cablecar2.jpg" className="cableCarImage" />
-            <div className="landingDescriptionText">
-              <p>Ride a cable car to Jebu Island.</p>
-            </div>
-          </div>
-          <div className="landingSection3">
-            <div className="landingDescriptionText">
-              <p>Enjoy the sunset by the ports.</p>
-            </div>
-            <img src="images/tando_jeongok.jpeg" className="sunsetImage" />
           </div>
         </div>
-      </div>
-
-      <div className="hwaseongImageThemesDiv">
-        <img src="" className="hwaseongImageThemesItem"></img>
+        {/* div for the photos and descriptions */}
+        <div className="landingPhotos">
+          <img className="landingImage" src="/images/tando_jeongok.jpeg" />
+          <img className="landingImage" src="/images/tando_jeongok.jpeg" />
+          <img className="landingImage" src="/images/tando_jeongok.jpeg" />
+        </div>
       </div>
     </div>
   );
